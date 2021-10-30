@@ -39,7 +39,7 @@ class CardWeatherState extends State<CardWeather> with MixinText, MixinColor {
                     child: ListTile(
                       title: Text(
                         "${widget.fiveDayWeather.temp?.round()} °${widget.deg}",
-                        style: heading3(mainColorInt()),
+                        style: heading3(blackColorInt()),
                       ),
                       subtitle: Text(widget.fiveDayWeather.description!,
                           style: heading4(0xFFBE86BF)),
@@ -48,8 +48,16 @@ class CardWeatherState extends State<CardWeather> with MixinText, MixinColor {
                   Padding(padding: const EdgeInsets.all(16)),
                   SvgPicture.asset(
                     widget.fiveDayWeather.icon!,
-                    width: 200.w,
-                    height: 200.h,
+                  ),
+                  Column(
+                    children: [
+                      Padding(
+                        padding:
+                            const EdgeInsets.only(top: 16, left: 16, right: 16),
+                        child: Text(
+                            "${widget.fiveDayWeather.dt!.hour}:${widget.fiveDayWeather.dt!.minute}0"),
+                      ),
+                    ],
                   ),
                 ],
               )),

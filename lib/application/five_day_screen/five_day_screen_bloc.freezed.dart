@@ -446,10 +446,12 @@ abstract class _UpDateDeg implements FiveDayScreenEvent {
 class _$FiveDayScreenStateTearOff {
   const _$FiveDayScreenStateTearOff();
 
-  _FiveDayScreenState call({List<FiveDayWeather>? list, String? deg}) {
+  _FiveDayScreenState call(
+      {List<FiveDayWeather>? list, String? deg, required bool isRight}) {
     return _FiveDayScreenState(
       list: list,
       deg: deg,
+      isRight: isRight,
     );
   }
 }
@@ -461,6 +463,7 @@ const $FiveDayScreenState = _$FiveDayScreenStateTearOff();
 mixin _$FiveDayScreenState {
   List<FiveDayWeather>? get list => throw _privateConstructorUsedError;
   String? get deg => throw _privateConstructorUsedError;
+  bool get isRight => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $FiveDayScreenStateCopyWith<FiveDayScreenState> get copyWith =>
@@ -472,7 +475,7 @@ abstract class $FiveDayScreenStateCopyWith<$Res> {
   factory $FiveDayScreenStateCopyWith(
           FiveDayScreenState value, $Res Function(FiveDayScreenState) then) =
       _$FiveDayScreenStateCopyWithImpl<$Res>;
-  $Res call({List<FiveDayWeather>? list, String? deg});
+  $Res call({List<FiveDayWeather>? list, String? deg, bool isRight});
 }
 
 /// @nodoc
@@ -488,6 +491,7 @@ class _$FiveDayScreenStateCopyWithImpl<$Res>
   $Res call({
     Object? list = freezed,
     Object? deg = freezed,
+    Object? isRight = freezed,
   }) {
     return _then(_value.copyWith(
       list: list == freezed
@@ -498,6 +502,10 @@ class _$FiveDayScreenStateCopyWithImpl<$Res>
           ? _value.deg
           : deg // ignore: cast_nullable_to_non_nullable
               as String?,
+      isRight: isRight == freezed
+          ? _value.isRight
+          : isRight // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -509,7 +517,7 @@ abstract class _$FiveDayScreenStateCopyWith<$Res>
           _FiveDayScreenState value, $Res Function(_FiveDayScreenState) then) =
       __$FiveDayScreenStateCopyWithImpl<$Res>;
   @override
-  $Res call({List<FiveDayWeather>? list, String? deg});
+  $Res call({List<FiveDayWeather>? list, String? deg, bool isRight});
 }
 
 /// @nodoc
@@ -527,6 +535,7 @@ class __$FiveDayScreenStateCopyWithImpl<$Res>
   $Res call({
     Object? list = freezed,
     Object? deg = freezed,
+    Object? isRight = freezed,
   }) {
     return _then(_FiveDayScreenState(
       list: list == freezed
@@ -537,6 +546,10 @@ class __$FiveDayScreenStateCopyWithImpl<$Res>
           ? _value.deg
           : deg // ignore: cast_nullable_to_non_nullable
               as String?,
+      isRight: isRight == freezed
+          ? _value.isRight
+          : isRight // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -544,16 +557,19 @@ class __$FiveDayScreenStateCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_FiveDayScreenState extends _FiveDayScreenState {
-  const _$_FiveDayScreenState({this.list, this.deg}) : super._();
+  const _$_FiveDayScreenState({this.list, this.deg, required this.isRight})
+      : super._();
 
   @override
   final List<FiveDayWeather>? list;
   @override
   final String? deg;
+  @override
+  final bool isRight;
 
   @override
   String toString() {
-    return 'FiveDayScreenState(list: $list, deg: $deg)';
+    return 'FiveDayScreenState(list: $list, deg: $deg, isRight: $isRight)';
   }
 
   @override
@@ -563,14 +579,17 @@ class _$_FiveDayScreenState extends _FiveDayScreenState {
             (identical(other.list, list) ||
                 const DeepCollectionEquality().equals(other.list, list)) &&
             (identical(other.deg, deg) ||
-                const DeepCollectionEquality().equals(other.deg, deg)));
+                const DeepCollectionEquality().equals(other.deg, deg)) &&
+            (identical(other.isRight, isRight) ||
+                const DeepCollectionEquality().equals(other.isRight, isRight)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(list) ^
-      const DeepCollectionEquality().hash(deg);
+      const DeepCollectionEquality().hash(deg) ^
+      const DeepCollectionEquality().hash(isRight);
 
   @JsonKey(ignore: true)
   @override
@@ -579,14 +598,18 @@ class _$_FiveDayScreenState extends _FiveDayScreenState {
 }
 
 abstract class _FiveDayScreenState extends FiveDayScreenState {
-  const factory _FiveDayScreenState({List<FiveDayWeather>? list, String? deg}) =
-      _$_FiveDayScreenState;
+  const factory _FiveDayScreenState(
+      {List<FiveDayWeather>? list,
+      String? deg,
+      required bool isRight}) = _$_FiveDayScreenState;
   const _FiveDayScreenState._() : super._();
 
   @override
   List<FiveDayWeather>? get list => throw _privateConstructorUsedError;
   @override
   String? get deg => throw _privateConstructorUsedError;
+  @override
+  bool get isRight => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$FiveDayScreenStateCopyWith<_FiveDayScreenState> get copyWith =>

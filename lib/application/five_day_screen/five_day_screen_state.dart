@@ -5,35 +5,16 @@ class FiveDayScreenState with _$FiveDayScreenState {
   const factory FiveDayScreenState({
     List<FiveDayWeather>? list,
     String? deg,
+    required bool isRight,
   }) = _FiveDayScreenState;
 
   const FiveDayScreenState._();
 
   factory FiveDayScreenState.initial() {
     return FiveDayScreenState(
-      list: [
-        FiveDayWeather(
-            description: "Clear sky",
-            main: "Clear",
-            temp: 0,
-            icon: 'icons/clear_sky.svg'),
-        FiveDayWeather(
-            description: "Clear sky",
-            main: "Clear",
-            temp: 0,
-            icon: 'icons/clear_sky.svg'),
-        FiveDayWeather(
-            description: "Clear sky",
-            main: "Clear",
-            temp: 0,
-            icon: 'icons/clear_sky.svg'),
-        FiveDayWeather(
-            description: "Clear sky",
-            main: "Clear",
-            temp: 0,
-            icon: 'icons/clear_sky.svg'),
-      ],
+      list: [],
       deg: "C",
+      isRight: true,
     );
   }
 }

@@ -31,13 +31,6 @@ class _SearchScreenFormWidget extends State<SearchScreenForm>
           "Weather App",
           style: heading3(mainColorInt()),
         ),
-        actions: [
-          IconButton(
-            color: mainColor(),
-            icon: const Icon(Icons.settings),
-            onPressed: () => Navigator.pushNamed(context, '/settings'),
-          ),
-        ],
       ),
       body: Container(
         alignment: Alignment.bottomCenter,
@@ -107,14 +100,10 @@ class _SearchScreenFormWidget extends State<SearchScreenForm>
                     ),
                     child: Text(
                       "Search",
-                      style: textMediumBold(whiteColorInt()),
+                      style: textMedium(whiteColorInt()),
                     ),
                     onPressed: () {
                       if (city != null) {
-                        context
-                            .read<SearchScreenBloc>()
-                            .add(SearchScreenEvent.search(city!));
-                        if (context.read<SearchScreenBloc>().state.isRight) {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
@@ -122,9 +111,6 @@ class _SearchScreenFormWidget extends State<SearchScreenForm>
                                   WeatherForecastScreen(city: city!),
                             ),
                           );
-                        } else {
-                          _cityNotFound(context);
-                        }
                       } else {
                         print(city);
                         _cityIsNull(context);
@@ -136,21 +122,6 @@ class _SearchScreenFormWidget extends State<SearchScreenForm>
             ),
           ],
         ),
-      ),
-    );
-  }
-
-  Future _cityNotFound(final BuildContext context) async {
-    await showDialog(
-      context: context,
-      builder: (context) => AlertDialog(
-        title: Text("City not found, please enter correct city"),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.of(context).pop(false),
-            child: Text("Come back"),
-          ),
-        ],
       ),
     );
   }

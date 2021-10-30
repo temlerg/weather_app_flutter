@@ -22,7 +22,9 @@ class FiveDayScreenBloc extends Bloc<FiveDayScreenEvent, FiveDayScreenState> {
         final weather = await getIt<IWeatherForecastRepository>()
             .loadWeatherForecast(e.city);
         yield* weather.fold(
-          (l) async* {},
+          (l) async* {yield state.copyWith(
+            isRight: false,
+          );},
           (r) async* {
             final List<FiveDayWeather> list = [];
             for (final item in r.list!) {
@@ -49,11 +51,13 @@ class FiveDayScreenBloc extends Bloc<FiveDayScreenEvent, FiveDayScreenState> {
                 main: main,
                 description: description,
                 icon: icon,
+
               ));
 
             }
             yield state.copyWith(
               list: list,
+              isRight: true
             );
           },
         );

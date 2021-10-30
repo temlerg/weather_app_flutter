@@ -12,14 +12,13 @@ class MainDataWeather extends StatefulWidget {
   final String degree;
   final String icon;
 
-  const MainDataWeather({
-    required this.degree,
-    required this.feelsLike,
-    required this.temp,
-    required this.weather,
-    required this.weatherDescription,
-    required this.icon
-  });
+  const MainDataWeather(
+      {required this.degree,
+      required this.feelsLike,
+      required this.temp,
+      required this.weather,
+      required this.weatherDescription,
+      required this.icon});
 
   @override
   State<StatefulWidget> createState() => MainDataWeatherState();
@@ -55,15 +54,33 @@ class MainDataWeatherState extends State<MainDataWeather>
         ),
         Padding(padding: const EdgeInsets.all(16.0)),
         ListTile(
-          title: Text(
-            "Current temperature ${(widget.temp.round()).toString()} °${widget.degree}",
-            style: heading2(mainColorInt()),
+          title: Row(
+            children: [
+              Text(
+                "Current temperature",
+                style: heading2(mainColorInt()),
+              ),
+              Padding(padding: const EdgeInsets.all(4)),
+              Text(
+                "${widget.temp.round()} °${widget.degree}",
+                style: heading2(blackColorInt()),
+              ),
+            ],
           ),
-          subtitle: Text(
-            "Feel likes ${widget.feelsLike} °${widget.degree}",
-            style: heading3(0xFF9e3fa0),
+          subtitle: Row(
+            children: [
+              Text(
+                "Feel likes",
+                style: heading3(0xFF9e3fa0),
+              ),
+              Padding(padding: const EdgeInsets.all(4)),
+              Text(
+                "${widget.feelsLike.round()} °${widget.degree}",
+                style: heading3(blackColorInt()),
+              ),
+            ],
           ),
-        )
+        ),
       ],
     );
   }

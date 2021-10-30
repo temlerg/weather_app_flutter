@@ -21,22 +21,40 @@ class OneDayScreenBloc extends Bloc<OneDayScreenEvent, OneDayScreenState> {
         final weather = await getIt<IWeatherForecastRepository>()
             .loadWeatherForecast(e.city);
         yield* weather.fold(
-          (l) async* {},
-          (r) async* {
+          (l) async* {
             yield state.copyWith(
-              cod: r.cod,
-              city: r.city!.name,
-              seaLevel: r.list![0].mainData!.seaLevel,
-              feelsLike: r.list![0].mainData!.feelLike,
-              tempMin: r.list![0].mainData!.tempMin,
-              tempMax: r.list![0].mainData!.tempMax,
-              temp: r.list![0].mainData!.temp,
-              humidity: r.list![0].mainData!.humidity,
-              main: r.list![0].weatherList![0].main,
-              description: r.list![0].weatherList![0].description,
-              windSpeed: r.list![0].wind!.speed,
+              isRight: false,
             );
-            OneDayScreenState.setIcon(state.main!, state.description!);
+          },
+          (r) async* {
+            final main = r.list![0].weatherList![0].main;
+            final description = r.list![0].weatherList![0].description;
+            String icon = '';
+            if (main == "Clear") icon = "icons/clear_sky.svg";
+            if (main == "Snow") icon = "icons/snow.svg";
+            if (main == "Rain") icon = "icons/rain.svg";
+            if (main == "Thunderstorm") icon = "icons/thunderstorm.svg";
+            if (description == "few clouds")
+              icon = "icons/few_clouds.svg";
+            if (description == "scattered clouds")
+              icon = "icons/scattered_clouds.svg";
+            if (description == "broken clouds" ||
+                description == "overcast clouds")
+              icon = "icons/broken_clouds.svg";
+            yield state.copyWith(
+                cod: r.cod,
+                city: r.city!.name,
+                seaLevel: r.list![0].mainData!.seaLevel,
+                feelsLike: r.list![0].mainData!.feelLike,
+                tempMin: r.list![0].mainData!.tempMin,
+                tempMax: r.list![0].mainData!.tempMax,
+                temp: r.list![0].mainData!.temp,
+                humidity: r.list![0].mainData!.humidity,
+                main: r.list![0].weatherList![0].main,
+                description: r.list![0].weatherList![0].description,
+                windSpeed: r.list![0].wind!.speed,
+                icon: icon,
+                isRight: true);
           },
         );
       },
@@ -46,20 +64,35 @@ class OneDayScreenBloc extends Bloc<OneDayScreenEvent, OneDayScreenState> {
         yield* weather.fold(
           (l) async* {},
           (r) async* {
+            final main = r.list![0].weatherList![0].main;
+            final description = r.list![0].weatherList![0].description;
+            String icon = '';
+            if (main == "Clear") icon = "icons/clear_sky.svg";
+            if (main == "Snow") icon = "icons/snow.svg";
+            if (main == "Rain") icon = "icons/rain.svg";
+            if (main == "Thunderstorm") icon = "icons/thunderstorm.svg";
+            if (description == "few clouds")
+              icon = "icons/few_clouds.svg";
+            if (description == "scattered clouds")
+              icon = "icons/scattered_clouds.svg";
+            if (description == "broken clouds" ||
+                description == "overcast clouds")
+              icon = "icons/broken_clouds.svg";
+
             yield state.copyWith(
-              cod: r.cod,
-              city: r.city!.name,
-              seaLevel: r.list![0].mainData!.seaLevel,
-              feelsLike: r.list![0].mainData!.feelLike,
-              tempMin: r.list![0].mainData!.tempMin,
-              tempMax: r.list![0].mainData!.tempMax,
-              temp: r.list![0].mainData!.temp,
-              humidity: r.list![0].mainData!.humidity,
-              main: r.list![0].weatherList![0].main,
-              description: r.list![0].weatherList![0].description,
-              windSpeed: r.list![0].wind!.speed,
-            );
-            OneDayScreenState.setIcon(state.main!, state.description!);
+                cod: r.cod,
+                city: r.city!.name,
+                seaLevel: r.list![0].mainData!.seaLevel,
+                feelsLike: r.list![0].mainData!.feelLike,
+                tempMin: r.list![0].mainData!.tempMin,
+                tempMax: r.list![0].mainData!.tempMax,
+                temp: r.list![0].mainData!.temp,
+                humidity: r.list![0].mainData!.humidity,
+                main: r.list![0].weatherList![0].main,
+                description: r.list![0].weatherList![0].description,
+                windSpeed: r.list![0].wind!.speed,
+                icon: icon,
+                isRight: true);
           },
         );
       },

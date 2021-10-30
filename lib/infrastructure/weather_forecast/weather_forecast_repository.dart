@@ -25,7 +25,7 @@ class WeatherForecastRepository implements IWeatherForecastRepository {
       // print("json.decode(response.body) = ${json.decode(response.body)}");
       final model = WeatherForecastModel.fromJson(json.decode(response.body));
       final ans = model.toEntity();
-      print("model = $model");
+      // print("model = $model");
       return Right(ans);
     } else {
       return Left(WeatherForecastFailure.serverError());

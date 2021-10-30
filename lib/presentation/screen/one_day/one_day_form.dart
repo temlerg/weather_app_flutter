@@ -1,10 +1,14 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:weather_app/application/one_day_screen/one_day_screen_bloc.dart';
+import 'package:weather_app/presentation/mixin/MixinColor.dart';
+import 'package:weather_app/presentation/mixin/MixinText.dart';
 import 'package:weather_app/presentation/screen/one_day/widgets/main_data_weather.dart';
 import 'package:weather_app/presentation/screen/one_day/widgets/more_data_weather.dart';
+import 'package:weather_app/presentation/screen/search_screen/search_screen.dart';
 
-class OneDayForm extends StatelessWidget {
+class OneDayForm extends StatelessWidget with MixinColor, MixinText {
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<OneDayScreenBloc, OneDayScreenState>(
@@ -12,8 +16,28 @@ class OneDayForm extends StatelessWidget {
         return previous != current;
       },
       builder: (context, state) {
-        return _buildBody(context, state);
+        if (state.isRight)
+          return _buildBody(context, state);
+        else {
+          return _buildErrorCity(context);
+        }
       },
+    );
+  }
+
+  Widget _buildErrorCity(BuildContext context) {
+    return AlertDialog(
+      backgroundColor: mainColor(),
+      title: Text(
+        "City not found, please enter correct city",
+        style: textMedium(whiteColorInt()),
+      ),
+      actions: [
+        TextButton(
+          onPressed: () => Navigator.of(context).pop(false),
+          child: Text("Come back", style: textSmall(whiteColorInt())),
+        ),
+      ],
     );
   }
 
@@ -41,6 +65,7 @@ class OneDayForm extends StatelessWidget {
 
     items.add(
       MoreDataWeather(
+        deg: degree,
         tempMax: tempMax!,
         tempMin: tempMin!,
         speed: speed!,

@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:weather_app/application/five_day_screen/five_day_screen_bloc.dart';
+import 'package:weather_app/application/one_day_screen/one_day_screen_bloc.dart';
 import 'package:weather_app/presentation/mixin/MixinColor.dart';
 import 'package:weather_app/presentation/mixin/MixinText.dart';
 import 'package:weather_app/presentation/screen/five_day/five_day_screen.dart';
@@ -33,20 +36,6 @@ class _WeatherForecastScreenState extends State<WeatherForecastScreen>
             onPressed: () => Navigator.pop(context, '/search'),
           ),
           title: Text(widget.city, style: heading3(mainColorInt()),),
-          // elevation: 0,
-          // toolbarHeight: 56,
-          actions: [
-            IconButton(
-              color: mainColor(),
-              icon: const Icon(Icons.settings),
-              onPressed: () => Navigator.pushNamed(context, '/settings'),
-            ),
-            IconButton(
-              color: mainColor(),
-              onPressed: () {},
-              icon: const Icon(Icons.refresh),
-            ),
-          ],
           backgroundColor: backgroundColor(),
           shape: Border(bottom: BorderSide(width: 0, color: appBarColor())),
           bottom: TabBar(
@@ -64,8 +53,6 @@ class _WeatherForecastScreenState extends State<WeatherForecastScreen>
         ),
         body: TabBarView(
           children: [
-            // Container(),
-            // Container(),
             OneDayScreen(widget.city),
             FiveDayScreen(widget.city),
           ],
