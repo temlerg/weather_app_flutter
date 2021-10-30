@@ -448,15 +448,15 @@ class _$OneDayScreenStateTearOff {
   _OneDayScreenState call(
       {String? cod,
       String? city,
-      int? seaLevel,
-      double? feelsLike,
-      double? tempMin,
-      double? tempMax,
-      double? temp,
-      int? humidity,
+      num? seaLevel,
+      num? feelsLike,
+      num? tempMin,
+      num? tempMax,
+      num? temp,
+      num? humidity,
       String? main,
       String? description,
-      double? windSpeed,
+      num? windSpeed,
       String? deg,
       String? icon,
       required bool isRight}) {
@@ -486,15 +486,15 @@ const $OneDayScreenState = _$OneDayScreenStateTearOff();
 mixin _$OneDayScreenState {
   String? get cod => throw _privateConstructorUsedError;
   String? get city => throw _privateConstructorUsedError;
-  int? get seaLevel => throw _privateConstructorUsedError;
-  double? get feelsLike => throw _privateConstructorUsedError;
-  double? get tempMin => throw _privateConstructorUsedError;
-  double? get tempMax => throw _privateConstructorUsedError;
-  double? get temp => throw _privateConstructorUsedError;
-  int? get humidity => throw _privateConstructorUsedError;
+  num? get seaLevel => throw _privateConstructorUsedError;
+  num? get feelsLike => throw _privateConstructorUsedError;
+  num? get tempMin => throw _privateConstructorUsedError;
+  num? get tempMax => throw _privateConstructorUsedError;
+  num? get temp => throw _privateConstructorUsedError;
+  num? get humidity => throw _privateConstructorUsedError;
   String? get main => throw _privateConstructorUsedError;
   String? get description => throw _privateConstructorUsedError;
-  double? get windSpeed => throw _privateConstructorUsedError;
+  num? get windSpeed => throw _privateConstructorUsedError;
   String? get deg => throw _privateConstructorUsedError;
   String? get icon => throw _privateConstructorUsedError;
   bool get isRight => throw _privateConstructorUsedError;
@@ -512,15 +512,15 @@ abstract class $OneDayScreenStateCopyWith<$Res> {
   $Res call(
       {String? cod,
       String? city,
-      int? seaLevel,
-      double? feelsLike,
-      double? tempMin,
-      double? tempMax,
-      double? temp,
-      int? humidity,
+      num? seaLevel,
+      num? feelsLike,
+      num? tempMin,
+      num? tempMax,
+      num? temp,
+      num? humidity,
       String? main,
       String? description,
-      double? windSpeed,
+      num? windSpeed,
       String? deg,
       String? icon,
       bool isRight});
@@ -564,27 +564,27 @@ class _$OneDayScreenStateCopyWithImpl<$Res>
       seaLevel: seaLevel == freezed
           ? _value.seaLevel
           : seaLevel // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as num?,
       feelsLike: feelsLike == freezed
           ? _value.feelsLike
           : feelsLike // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as num?,
       tempMin: tempMin == freezed
           ? _value.tempMin
           : tempMin // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as num?,
       tempMax: tempMax == freezed
           ? _value.tempMax
           : tempMax // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as num?,
       temp: temp == freezed
           ? _value.temp
           : temp // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as num?,
       humidity: humidity == freezed
           ? _value.humidity
           : humidity // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as num?,
       main: main == freezed
           ? _value.main
           : main // ignore: cast_nullable_to_non_nullable
@@ -596,7 +596,7 @@ class _$OneDayScreenStateCopyWithImpl<$Res>
       windSpeed: windSpeed == freezed
           ? _value.windSpeed
           : windSpeed // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as num?,
       deg: deg == freezed
           ? _value.deg
           : deg // ignore: cast_nullable_to_non_nullable
@@ -623,15 +623,15 @@ abstract class _$OneDayScreenStateCopyWith<$Res>
   $Res call(
       {String? cod,
       String? city,
-      int? seaLevel,
-      double? feelsLike,
-      double? tempMin,
-      double? tempMax,
-      double? temp,
-      int? humidity,
+      num? seaLevel,
+      num? feelsLike,
+      num? tempMin,
+      num? tempMax,
+      num? temp,
+      num? humidity,
       String? main,
       String? description,
-      double? windSpeed,
+      num? windSpeed,
       String? deg,
       String? icon,
       bool isRight});
@@ -677,27 +677,27 @@ class __$OneDayScreenStateCopyWithImpl<$Res>
       seaLevel: seaLevel == freezed
           ? _value.seaLevel
           : seaLevel // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as num?,
       feelsLike: feelsLike == freezed
           ? _value.feelsLike
           : feelsLike // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as num?,
       tempMin: tempMin == freezed
           ? _value.tempMin
           : tempMin // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as num?,
       tempMax: tempMax == freezed
           ? _value.tempMax
           : tempMax // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as num?,
       temp: temp == freezed
           ? _value.temp
           : temp // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as num?,
       humidity: humidity == freezed
           ? _value.humidity
           : humidity // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as num?,
       main: main == freezed
           ? _value.main
           : main // ignore: cast_nullable_to_non_nullable
@@ -709,7 +709,7 @@ class __$OneDayScreenStateCopyWithImpl<$Res>
       windSpeed: windSpeed == freezed
           ? _value.windSpeed
           : windSpeed // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as num?,
       deg: deg == freezed
           ? _value.deg
           : deg // ignore: cast_nullable_to_non_nullable
@@ -751,23 +751,23 @@ class _$_OneDayScreenState extends _OneDayScreenState {
   @override
   final String? city;
   @override
-  final int? seaLevel;
+  final num? seaLevel;
   @override
-  final double? feelsLike;
+  final num? feelsLike;
   @override
-  final double? tempMin;
+  final num? tempMin;
   @override
-  final double? tempMax;
+  final num? tempMax;
   @override
-  final double? temp;
+  final num? temp;
   @override
-  final int? humidity;
+  final num? humidity;
   @override
   final String? main;
   @override
   final String? description;
   @override
-  final double? windSpeed;
+  final num? windSpeed;
   @override
   final String? deg;
   @override
@@ -849,15 +849,15 @@ abstract class _OneDayScreenState extends OneDayScreenState {
   const factory _OneDayScreenState(
       {String? cod,
       String? city,
-      int? seaLevel,
-      double? feelsLike,
-      double? tempMin,
-      double? tempMax,
-      double? temp,
-      int? humidity,
+      num? seaLevel,
+      num? feelsLike,
+      num? tempMin,
+      num? tempMax,
+      num? temp,
+      num? humidity,
       String? main,
       String? description,
-      double? windSpeed,
+      num? windSpeed,
       String? deg,
       String? icon,
       required bool isRight}) = _$_OneDayScreenState;
@@ -868,23 +868,23 @@ abstract class _OneDayScreenState extends OneDayScreenState {
   @override
   String? get city => throw _privateConstructorUsedError;
   @override
-  int? get seaLevel => throw _privateConstructorUsedError;
+  num? get seaLevel => throw _privateConstructorUsedError;
   @override
-  double? get feelsLike => throw _privateConstructorUsedError;
+  num? get feelsLike => throw _privateConstructorUsedError;
   @override
-  double? get tempMin => throw _privateConstructorUsedError;
+  num? get tempMin => throw _privateConstructorUsedError;
   @override
-  double? get tempMax => throw _privateConstructorUsedError;
+  num? get tempMax => throw _privateConstructorUsedError;
   @override
-  double? get temp => throw _privateConstructorUsedError;
+  num? get temp => throw _privateConstructorUsedError;
   @override
-  int? get humidity => throw _privateConstructorUsedError;
+  num? get humidity => throw _privateConstructorUsedError;
   @override
   String? get main => throw _privateConstructorUsedError;
   @override
   String? get description => throw _privateConstructorUsedError;
   @override
-  double? get windSpeed => throw _privateConstructorUsedError;
+  num? get windSpeed => throw _privateConstructorUsedError;
   @override
   String? get deg => throw _privateConstructorUsedError;
   @override

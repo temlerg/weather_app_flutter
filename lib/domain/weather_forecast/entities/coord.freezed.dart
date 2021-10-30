@@ -16,7 +16,7 @@ final _privateConstructorUsedError = UnsupportedError(
 class _$CoordTearOff {
   const _$CoordTearOff();
 
-  _Coord call({double? lon, double? lat}) {
+  _Coord call({num? lon, num? lat}) {
     return _Coord(
       lon: lon,
       lat: lat,
@@ -29,8 +29,8 @@ const $Coord = _$CoordTearOff();
 
 /// @nodoc
 mixin _$Coord {
-  double? get lon => throw _privateConstructorUsedError;
-  double? get lat => throw _privateConstructorUsedError;
+  num? get lon => throw _privateConstructorUsedError;
+  num? get lat => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $CoordCopyWith<Coord> get copyWith => throw _privateConstructorUsedError;
@@ -40,7 +40,7 @@ mixin _$Coord {
 abstract class $CoordCopyWith<$Res> {
   factory $CoordCopyWith(Coord value, $Res Function(Coord) then) =
       _$CoordCopyWithImpl<$Res>;
-  $Res call({double? lon, double? lat});
+  $Res call({num? lon, num? lat});
 }
 
 /// @nodoc
@@ -60,11 +60,11 @@ class _$CoordCopyWithImpl<$Res> implements $CoordCopyWith<$Res> {
       lon: lon == freezed
           ? _value.lon
           : lon // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as num?,
       lat: lat == freezed
           ? _value.lat
           : lat // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as num?,
     ));
   }
 }
@@ -74,7 +74,7 @@ abstract class _$CoordCopyWith<$Res> implements $CoordCopyWith<$Res> {
   factory _$CoordCopyWith(_Coord value, $Res Function(_Coord) then) =
       __$CoordCopyWithImpl<$Res>;
   @override
-  $Res call({double? lon, double? lat});
+  $Res call({num? lon, num? lat});
 }
 
 /// @nodoc
@@ -95,11 +95,11 @@ class __$CoordCopyWithImpl<$Res> extends _$CoordCopyWithImpl<$Res>
       lon: lon == freezed
           ? _value.lon
           : lon // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as num?,
       lat: lat == freezed
           ? _value.lat
           : lat // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as num?,
     ));
   }
 }
@@ -110,9 +110,9 @@ class _$_Coord extends _Coord {
   const _$_Coord({this.lon, this.lat}) : super._();
 
   @override
-  final double? lon;
+  final num? lon;
   @override
-  final double? lat;
+  final num? lat;
 
   @override
   String toString() {
@@ -142,13 +142,13 @@ class _$_Coord extends _Coord {
 }
 
 abstract class _Coord extends Coord {
-  const factory _Coord({double? lon, double? lat}) = _$_Coord;
+  const factory _Coord({num? lon, num? lat}) = _$_Coord;
   const _Coord._() : super._();
 
   @override
-  double? get lon => throw _privateConstructorUsedError;
+  num? get lon => throw _privateConstructorUsedError;
   @override
-  double? get lat => throw _privateConstructorUsedError;
+  num? get lat => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$CoordCopyWith<_Coord> get copyWith => throw _privateConstructorUsedError;

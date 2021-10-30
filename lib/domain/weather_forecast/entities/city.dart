@@ -6,25 +6,25 @@ part 'city.freezed.dart';
 @freezed
 class City with _$City {
   const factory City({
-    double? id,
+    num? id,
     String? name,
     Coord? coord,
     String? country,
-    double? population,
-    double? timezone,
-    double? sunrise,
-    double? sunset,
+    num? population,
+    num? timezone,
+    num? sunrise,
+    num? sunset,
   }) = _City;
 
   const City._();
 
 
   factory City.fromJson(Map<String, dynamic> json) {
-    final double id = json["id"] as double;
-    final double population = json["population"] as double;
-    final double timezone = json["timezone"] as double;
-    final double sunrise = json["sunrise"] as double;
-    final double sunset = json["sunset"] as double;
+    final num id = json["id"] ;
+    final num population = json["population"];
+    final num timezone = json["timezone"];
+    final num sunrise = json["sunrise"];
+    final num sunset = json["sunset"];
     final Coord coord = Coord.fromJson(json["coord"] as Map<String, dynamic>);
     final String name = json["name"] as String;
     final String country = json["country"] as String;

@@ -5,14 +5,14 @@ part 'wind.freezed.dart';
 @freezed
 class Wind with _$Wind {
   const factory Wind({
-    double? speed,
+    num? speed,
   }) = _Wind;
 
   const Wind._();
 
 
   factory Wind.fromJson(Map<String, dynamic> json) {
-    final double speed = json["speed"] as double;
+    final num speed = json["speed"];
 
     return Wind(speed: speed);
   }

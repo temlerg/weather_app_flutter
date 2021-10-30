@@ -5,7 +5,7 @@ part 'five_day_weather.freezed.dart';
 @freezed
 class FiveDayWeather with _$FiveDayWeather {
   const factory FiveDayWeather({
-    double? temp,
+    num? temp,
     String? description,
     String? main,
     DateTime? dt,

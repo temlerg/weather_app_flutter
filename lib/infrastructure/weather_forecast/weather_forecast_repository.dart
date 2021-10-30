@@ -22,7 +22,7 @@ class WeatherForecastRepository implements IWeatherForecastRepository {
     final response = await http.post(url);
 
     if (response.statusCode == 200) {
-      // print("json.decode(response.body) = ${json.decode(response.body)}");
+      print("json.decode(response.body) = ${json.decode(response.body)}");
       final model = WeatherForecastModel.fromJson(json.decode(response.body));
       final ans = model.toEntity();
       // print("model = $model");

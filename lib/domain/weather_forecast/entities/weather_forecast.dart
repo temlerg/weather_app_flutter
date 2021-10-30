@@ -8,7 +8,7 @@ part 'weather_forecast.freezed.dart';
 class WeatherForecast with _$WeatherForecast {
   const factory WeatherForecast({
     String? cod,
-    double? message,
+    num? message,
     int? cnt,
     List<Forecasts>? list,
     City? city,
@@ -19,7 +19,7 @@ class WeatherForecast with _$WeatherForecast {
   factory WeatherForecast.fromJson(Map<String, dynamic> json) {
     final String cod = json["cod"] as String;
 
-    final double message = json["message"] as double;
+    final num message = json["message"];
 
     final int cnt = json["cnt"] as int;
 

@@ -32,35 +32,44 @@ class CardWeatherState extends State<CardWeather> with MixinText, MixinColor {
             borderRadius: BorderRadius.circular(16),
           ),
           child: ClipRRect(
-              borderRadius: BorderRadius.circular(16.0),
-              child: Row(
-                children: [
-                  Expanded(
-                    child: ListTile(
-                      title: Text(
-                        "${widget.fiveDayWeather.temp?.round()} °${widget.deg}",
-                        style: heading3(blackColorInt()),
-                      ),
-                      subtitle: Text(widget.fiveDayWeather.description!,
-                          style: heading4(0xFFBE86BF)),
+            borderRadius: BorderRadius.circular(16.0),
+            child: Row(
+              children: [
+                Expanded(
+                  child: ListTile(
+                    title: Text(
+                      "${widget.fiveDayWeather.temp?.round()} °${widget.deg}",
+                      style: heading3(blackColorInt()),
                     ),
+                    subtitle: Text(widget.fiveDayWeather.description!,
+                        style: heading4(0xFFBE86BF)),
                   ),
-                  Padding(padding: const EdgeInsets.all(16)),
-                  SvgPicture.asset(
+                ),
+                // Expanded(child: Padding(padding: const EdgeInsets.all(16))),
+                Expanded(
+                  child: SvgPicture.asset(
                     widget.fiveDayWeather.icon!,
                   ),
-                  Column(
+                ),
+                Expanded(
+                  child: Column(
                     children: [
-                      Padding(
-                        padding:
-                            const EdgeInsets.only(top: 16, left: 16, right: 16),
-                        child: Text(
-                            "${widget.fiveDayWeather.dt!.hour}:${widget.fiveDayWeather.dt!.minute}0"),
+                      Expanded(
+                        child: Padding(
+                          padding: const EdgeInsets.only(
+                              top: 16, left: 16, right: 16),
+                          child: ListTile(
+                              title: Text("${widget.fiveDayWeather.dt!.month}-${widget.fiveDayWeather.dt!.day}"),
+                            subtitle: Text("${widget.fiveDayWeather.dt!.hour}:${widget.fiveDayWeather.dt!.minute}0"),
+                          ),
+                        ),
                       ),
                     ],
                   ),
-                ],
-              )),
+                ),
+              ],
+            ),
+          ),
         ),
       ),
     );

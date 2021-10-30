@@ -17,12 +17,12 @@ class _$MainDataTearOff {
   const _$MainDataTearOff();
 
   _MainData call(
-      {int? seaLevel,
-      double? feelLike,
-      double? tempMin,
-      double? tempMax,
-      double? temp,
-      int? humidity}) {
+      {num? seaLevel,
+      num? feelLike,
+      num? tempMin,
+      num? tempMax,
+      num? temp,
+      num? humidity}) {
     return _MainData(
       seaLevel: seaLevel,
       feelLike: feelLike,
@@ -39,12 +39,12 @@ const $MainData = _$MainDataTearOff();
 
 /// @nodoc
 mixin _$MainData {
-  int? get seaLevel => throw _privateConstructorUsedError;
-  double? get feelLike => throw _privateConstructorUsedError;
-  double? get tempMin => throw _privateConstructorUsedError;
-  double? get tempMax => throw _privateConstructorUsedError;
-  double? get temp => throw _privateConstructorUsedError;
-  int? get humidity => throw _privateConstructorUsedError;
+  num? get seaLevel => throw _privateConstructorUsedError;
+  num? get feelLike => throw _privateConstructorUsedError;
+  num? get tempMin => throw _privateConstructorUsedError;
+  num? get tempMax => throw _privateConstructorUsedError;
+  num? get temp => throw _privateConstructorUsedError;
+  num? get humidity => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $MainDataCopyWith<MainData> get copyWith =>
@@ -56,12 +56,12 @@ abstract class $MainDataCopyWith<$Res> {
   factory $MainDataCopyWith(MainData value, $Res Function(MainData) then) =
       _$MainDataCopyWithImpl<$Res>;
   $Res call(
-      {int? seaLevel,
-      double? feelLike,
-      double? tempMin,
-      double? tempMax,
-      double? temp,
-      int? humidity});
+      {num? seaLevel,
+      num? feelLike,
+      num? tempMin,
+      num? tempMax,
+      num? temp,
+      num? humidity});
 }
 
 /// @nodoc
@@ -85,27 +85,27 @@ class _$MainDataCopyWithImpl<$Res> implements $MainDataCopyWith<$Res> {
       seaLevel: seaLevel == freezed
           ? _value.seaLevel
           : seaLevel // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as num?,
       feelLike: feelLike == freezed
           ? _value.feelLike
           : feelLike // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as num?,
       tempMin: tempMin == freezed
           ? _value.tempMin
           : tempMin // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as num?,
       tempMax: tempMax == freezed
           ? _value.tempMax
           : tempMax // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as num?,
       temp: temp == freezed
           ? _value.temp
           : temp // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as num?,
       humidity: humidity == freezed
           ? _value.humidity
           : humidity // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as num?,
     ));
   }
 }
@@ -116,12 +116,12 @@ abstract class _$MainDataCopyWith<$Res> implements $MainDataCopyWith<$Res> {
       __$MainDataCopyWithImpl<$Res>;
   @override
   $Res call(
-      {int? seaLevel,
-      double? feelLike,
-      double? tempMin,
-      double? tempMax,
-      double? temp,
-      int? humidity});
+      {num? seaLevel,
+      num? feelLike,
+      num? tempMin,
+      num? tempMax,
+      num? temp,
+      num? humidity});
 }
 
 /// @nodoc
@@ -146,27 +146,27 @@ class __$MainDataCopyWithImpl<$Res> extends _$MainDataCopyWithImpl<$Res>
       seaLevel: seaLevel == freezed
           ? _value.seaLevel
           : seaLevel // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as num?,
       feelLike: feelLike == freezed
           ? _value.feelLike
           : feelLike // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as num?,
       tempMin: tempMin == freezed
           ? _value.tempMin
           : tempMin // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as num?,
       tempMax: tempMax == freezed
           ? _value.tempMax
           : tempMax // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as num?,
       temp: temp == freezed
           ? _value.temp
           : temp // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as num?,
       humidity: humidity == freezed
           ? _value.humidity
           : humidity // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as num?,
     ));
   }
 }
@@ -184,17 +184,17 @@ class _$_MainData extends _MainData {
       : super._();
 
   @override
-  final int? seaLevel;
+  final num? seaLevel;
   @override
-  final double? feelLike;
+  final num? feelLike;
   @override
-  final double? tempMin;
+  final num? tempMin;
   @override
-  final double? tempMax;
+  final num? tempMax;
   @override
-  final double? temp;
+  final num? temp;
   @override
-  final int? humidity;
+  final num? humidity;
 
   @override
   String toString() {
@@ -242,26 +242,26 @@ class _$_MainData extends _MainData {
 
 abstract class _MainData extends MainData {
   const factory _MainData(
-      {int? seaLevel,
-      double? feelLike,
-      double? tempMin,
-      double? tempMax,
-      double? temp,
-      int? humidity}) = _$_MainData;
+      {num? seaLevel,
+      num? feelLike,
+      num? tempMin,
+      num? tempMax,
+      num? temp,
+      num? humidity}) = _$_MainData;
   const _MainData._() : super._();
 
   @override
-  int? get seaLevel => throw _privateConstructorUsedError;
+  num? get seaLevel => throw _privateConstructorUsedError;
   @override
-  double? get feelLike => throw _privateConstructorUsedError;
+  num? get feelLike => throw _privateConstructorUsedError;
   @override
-  double? get tempMin => throw _privateConstructorUsedError;
+  num? get tempMin => throw _privateConstructorUsedError;
   @override
-  double? get tempMax => throw _privateConstructorUsedError;
+  num? get tempMax => throw _privateConstructorUsedError;
   @override
-  double? get temp => throw _privateConstructorUsedError;
+  num? get temp => throw _privateConstructorUsedError;
   @override
-  int? get humidity => throw _privateConstructorUsedError;
+  num? get humidity => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$MainDataCopyWith<_MainData> get copyWith =>

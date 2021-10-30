@@ -5,8 +5,8 @@ import 'package:weather_app/presentation/mixin/MixinColor.dart';
 import 'package:weather_app/presentation/mixin/MixinText.dart';
 
 class MainDataWeather extends StatefulWidget {
-  final double feelsLike;
-  final double temp;
+  final num feelsLike;
+  final num temp;
   final String weather;
   final String weatherDescription;
   final String degree;

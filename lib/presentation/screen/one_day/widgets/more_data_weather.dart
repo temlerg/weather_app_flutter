@@ -4,10 +4,10 @@ import 'package:weather_app/presentation/mixin/MixinColor.dart';
 import 'package:weather_app/presentation/mixin/MixinText.dart';
 
 class MoreDataWeather extends StatefulWidget {
-  final double tempMin;
-  final double tempMax;
-  final double speed;
-  final int humidity;
+  final num tempMin;
+  final num tempMax;
+  final num speed;
+  final num humidity;
   final String deg;
 
   const MoreDataWeather({
@@ -27,7 +27,7 @@ class MoreDataWeatherState extends State<MoreDataWeather>
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 64, left: 16),
+      padding: const EdgeInsets.only(top: 32, left: 16),
       child: Column(
         children: [
           Padding(padding: const EdgeInsets.all(16)),

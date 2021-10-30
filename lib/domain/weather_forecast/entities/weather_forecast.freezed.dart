@@ -18,7 +18,7 @@ class _$WeatherForecastTearOff {
 
   _WeatherForecast call(
       {String? cod,
-      double? message,
+      num? message,
       int? cnt,
       List<Forecasts>? list,
       City? city}) {
@@ -38,7 +38,7 @@ const $WeatherForecast = _$WeatherForecastTearOff();
 /// @nodoc
 mixin _$WeatherForecast {
   String? get cod => throw _privateConstructorUsedError;
-  double? get message => throw _privateConstructorUsedError;
+  num? get message => throw _privateConstructorUsedError;
   int? get cnt => throw _privateConstructorUsedError;
   List<Forecasts>? get list => throw _privateConstructorUsedError;
   City? get city => throw _privateConstructorUsedError;
@@ -54,11 +54,7 @@ abstract class $WeatherForecastCopyWith<$Res> {
           WeatherForecast value, $Res Function(WeatherForecast) then) =
       _$WeatherForecastCopyWithImpl<$Res>;
   $Res call(
-      {String? cod,
-      double? message,
-      int? cnt,
-      List<Forecasts>? list,
-      City? city});
+      {String? cod, num? message, int? cnt, List<Forecasts>? list, City? city});
 
   $CityCopyWith<$Res>? get city;
 }
@@ -88,7 +84,7 @@ class _$WeatherForecastCopyWithImpl<$Res>
       message: message == freezed
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as num?,
       cnt: cnt == freezed
           ? _value.cnt
           : cnt // ignore: cast_nullable_to_non_nullable
@@ -124,11 +120,7 @@ abstract class _$WeatherForecastCopyWith<$Res>
       __$WeatherForecastCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String? cod,
-      double? message,
-      int? cnt,
-      List<Forecasts>? list,
-      City? city});
+      {String? cod, num? message, int? cnt, List<Forecasts>? list, City? city});
 
   @override
   $CityCopyWith<$Res>? get city;
@@ -161,7 +153,7 @@ class __$WeatherForecastCopyWithImpl<$Res>
       message: message == freezed
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as num?,
       cnt: cnt == freezed
           ? _value.cnt
           : cnt // ignore: cast_nullable_to_non_nullable
@@ -188,7 +180,7 @@ class _$_WeatherForecast extends _WeatherForecast {
   @override
   final String? cod;
   @override
-  final double? message;
+  final num? message;
   @override
   final int? cnt;
   @override
@@ -236,7 +228,7 @@ class _$_WeatherForecast extends _WeatherForecast {
 abstract class _WeatherForecast extends WeatherForecast {
   const factory _WeatherForecast(
       {String? cod,
-      double? message,
+      num? message,
       int? cnt,
       List<Forecasts>? list,
       City? city}) = _$_WeatherForecast;
@@ -245,7 +237,7 @@ abstract class _WeatherForecast extends WeatherForecast {
   @override
   String? get cod => throw _privateConstructorUsedError;
   @override
-  double? get message => throw _privateConstructorUsedError;
+  num? get message => throw _privateConstructorUsedError;
   @override
   int? get cnt => throw _privateConstructorUsedError;
   @override

@@ -5,24 +5,24 @@ part 'main_data.freezed.dart';
 @freezed
 class MainData with _$MainData {
   const factory MainData({
-    int? seaLevel,
-    double? feelLike,
-    double? tempMin,
-    double? tempMax,
-    double? temp,
-    int? humidity,
+    num? seaLevel,
+    num? feelLike,
+    num? tempMin,
+    num? tempMax,
+    num? temp,
+    num? humidity,
   }) = _MainData;
 
   const MainData._();
 
 
   factory MainData.fromJson(Map<String, dynamic> json) {
-    final int seaLevel = json["sea_level"] as int;
-    final int humidity = json["humidity"] as int;
-    final double feelLike = json["feels_like"] as double;
-    final double tempMin = json["temp_min"] as double;
-    final double tempMax = json["temp_max"] as double;
-    final double temp = json["temp"] as double;
+    final num seaLevel = json["sea_level"];
+    final num humidity = json["humidity"];
+    final num feelLike = json["feels_like"];
+    final num tempMin = json["temp_min"];
+    final num tempMax = json["temp_max"];
+    final num temp = json["temp"];
 
     return MainData(
         seaLevel: seaLevel,

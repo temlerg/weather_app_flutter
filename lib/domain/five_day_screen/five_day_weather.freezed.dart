@@ -17,7 +17,7 @@ class _$FiveDayWeatherTearOff {
   const _$FiveDayWeatherTearOff();
 
   _FiveDayWeather call(
-      {double? temp,
+      {num? temp,
       String? description,
       String? main,
       DateTime? dt,
@@ -37,7 +37,7 @@ const $FiveDayWeather = _$FiveDayWeatherTearOff();
 
 /// @nodoc
 mixin _$FiveDayWeather {
-  double? get temp => throw _privateConstructorUsedError;
+  num? get temp => throw _privateConstructorUsedError;
   String? get description => throw _privateConstructorUsedError;
   String? get main => throw _privateConstructorUsedError;
   DateTime? get dt => throw _privateConstructorUsedError;
@@ -54,7 +54,7 @@ abstract class $FiveDayWeatherCopyWith<$Res> {
           FiveDayWeather value, $Res Function(FiveDayWeather) then) =
       _$FiveDayWeatherCopyWithImpl<$Res>;
   $Res call(
-      {double? temp,
+      {num? temp,
       String? description,
       String? main,
       DateTime? dt,
@@ -82,7 +82,7 @@ class _$FiveDayWeatherCopyWithImpl<$Res>
       temp: temp == freezed
           ? _value.temp
           : temp // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as num?,
       description: description == freezed
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
@@ -111,7 +111,7 @@ abstract class _$FiveDayWeatherCopyWith<$Res>
       __$FiveDayWeatherCopyWithImpl<$Res>;
   @override
   $Res call(
-      {double? temp,
+      {num? temp,
       String? description,
       String? main,
       DateTime? dt,
@@ -141,7 +141,7 @@ class __$FiveDayWeatherCopyWithImpl<$Res>
       temp: temp == freezed
           ? _value.temp
           : temp // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as num?,
       description: description == freezed
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
@@ -170,7 +170,7 @@ class _$_FiveDayWeather extends _FiveDayWeather {
       : super._();
 
   @override
-  final double? temp;
+  final num? temp;
   @override
   final String? description;
   @override
@@ -219,7 +219,7 @@ class _$_FiveDayWeather extends _FiveDayWeather {
 
 abstract class _FiveDayWeather extends FiveDayWeather {
   const factory _FiveDayWeather(
-      {double? temp,
+      {num? temp,
       String? description,
       String? main,
       DateTime? dt,
@@ -227,7 +227,7 @@ abstract class _FiveDayWeather extends FiveDayWeather {
   const _FiveDayWeather._() : super._();
 
   @override
-  double? get temp => throw _privateConstructorUsedError;
+  num? get temp => throw _privateConstructorUsedError;
   @override
   String? get description => throw _privateConstructorUsedError;
   @override

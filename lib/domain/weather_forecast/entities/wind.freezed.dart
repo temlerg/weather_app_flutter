@@ -16,7 +16,7 @@ final _privateConstructorUsedError = UnsupportedError(
 class _$WindTearOff {
   const _$WindTearOff();
 
-  _Wind call({double? speed}) {
+  _Wind call({num? speed}) {
     return _Wind(
       speed: speed,
     );
@@ -28,7 +28,7 @@ const $Wind = _$WindTearOff();
 
 /// @nodoc
 mixin _$Wind {
-  double? get speed => throw _privateConstructorUsedError;
+  num? get speed => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $WindCopyWith<Wind> get copyWith => throw _privateConstructorUsedError;
@@ -38,7 +38,7 @@ mixin _$Wind {
 abstract class $WindCopyWith<$Res> {
   factory $WindCopyWith(Wind value, $Res Function(Wind) then) =
       _$WindCopyWithImpl<$Res>;
-  $Res call({double? speed});
+  $Res call({num? speed});
 }
 
 /// @nodoc
@@ -57,7 +57,7 @@ class _$WindCopyWithImpl<$Res> implements $WindCopyWith<$Res> {
       speed: speed == freezed
           ? _value.speed
           : speed // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as num?,
     ));
   }
 }
@@ -67,7 +67,7 @@ abstract class _$WindCopyWith<$Res> implements $WindCopyWith<$Res> {
   factory _$WindCopyWith(_Wind value, $Res Function(_Wind) then) =
       __$WindCopyWithImpl<$Res>;
   @override
-  $Res call({double? speed});
+  $Res call({num? speed});
 }
 
 /// @nodoc
@@ -87,7 +87,7 @@ class __$WindCopyWithImpl<$Res> extends _$WindCopyWithImpl<$Res>
       speed: speed == freezed
           ? _value.speed
           : speed // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as num?,
     ));
   }
 }
@@ -98,7 +98,7 @@ class _$_Wind extends _Wind {
   const _$_Wind({this.speed}) : super._();
 
   @override
-  final double? speed;
+  final num? speed;
 
   @override
   String toString() {
@@ -124,11 +124,11 @@ class _$_Wind extends _Wind {
 }
 
 abstract class _Wind extends Wind {
-  const factory _Wind({double? speed}) = _$_Wind;
+  const factory _Wind({num? speed}) = _$_Wind;
   const _Wind._() : super._();
 
   @override
-  double? get speed => throw _privateConstructorUsedError;
+  num? get speed => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$WindCopyWith<_Wind> get copyWith => throw _privateConstructorUsedError;

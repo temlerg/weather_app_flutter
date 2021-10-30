@@ -17,14 +17,14 @@ class _$CityTearOff {
   const _$CityTearOff();
 
   _City call(
-      {double? id,
+      {num? id,
       String? name,
       Coord? coord,
       String? country,
-      double? population,
-      double? timezone,
-      double? sunrise,
-      double? sunset}) {
+      num? population,
+      num? timezone,
+      num? sunrise,
+      num? sunset}) {
     return _City(
       id: id,
       name: name,
@@ -43,14 +43,14 @@ const $City = _$CityTearOff();
 
 /// @nodoc
 mixin _$City {
-  double? get id => throw _privateConstructorUsedError;
+  num? get id => throw _privateConstructorUsedError;
   String? get name => throw _privateConstructorUsedError;
   Coord? get coord => throw _privateConstructorUsedError;
   String? get country => throw _privateConstructorUsedError;
-  double? get population => throw _privateConstructorUsedError;
-  double? get timezone => throw _privateConstructorUsedError;
-  double? get sunrise => throw _privateConstructorUsedError;
-  double? get sunset => throw _privateConstructorUsedError;
+  num? get population => throw _privateConstructorUsedError;
+  num? get timezone => throw _privateConstructorUsedError;
+  num? get sunrise => throw _privateConstructorUsedError;
+  num? get sunset => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $CityCopyWith<City> get copyWith => throw _privateConstructorUsedError;
@@ -61,14 +61,14 @@ abstract class $CityCopyWith<$Res> {
   factory $CityCopyWith(City value, $Res Function(City) then) =
       _$CityCopyWithImpl<$Res>;
   $Res call(
-      {double? id,
+      {num? id,
       String? name,
       Coord? coord,
       String? country,
-      double? population,
-      double? timezone,
-      double? sunrise,
-      double? sunset});
+      num? population,
+      num? timezone,
+      num? sunrise,
+      num? sunset});
 
   $CoordCopyWith<$Res>? get coord;
 }
@@ -96,7 +96,7 @@ class _$CityCopyWithImpl<$Res> implements $CityCopyWith<$Res> {
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as num?,
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -112,19 +112,19 @@ class _$CityCopyWithImpl<$Res> implements $CityCopyWith<$Res> {
       population: population == freezed
           ? _value.population
           : population // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as num?,
       timezone: timezone == freezed
           ? _value.timezone
           : timezone // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as num?,
       sunrise: sunrise == freezed
           ? _value.sunrise
           : sunrise // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as num?,
       sunset: sunset == freezed
           ? _value.sunset
           : sunset // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as num?,
     ));
   }
 
@@ -146,14 +146,14 @@ abstract class _$CityCopyWith<$Res> implements $CityCopyWith<$Res> {
       __$CityCopyWithImpl<$Res>;
   @override
   $Res call(
-      {double? id,
+      {num? id,
       String? name,
       Coord? coord,
       String? country,
-      double? population,
-      double? timezone,
-      double? sunrise,
-      double? sunset});
+      num? population,
+      num? timezone,
+      num? sunrise,
+      num? sunset});
 
   @override
   $CoordCopyWith<$Res>? get coord;
@@ -183,7 +183,7 @@ class __$CityCopyWithImpl<$Res> extends _$CityCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as num?,
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -199,19 +199,19 @@ class __$CityCopyWithImpl<$Res> extends _$CityCopyWithImpl<$Res>
       population: population == freezed
           ? _value.population
           : population // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as num?,
       timezone: timezone == freezed
           ? _value.timezone
           : timezone // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as num?,
       sunrise: sunrise == freezed
           ? _value.sunrise
           : sunrise // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as num?,
       sunset: sunset == freezed
           ? _value.sunset
           : sunset // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as num?,
     ));
   }
 }
@@ -231,7 +231,7 @@ class _$_City extends _City {
       : super._();
 
   @override
-  final double? id;
+  final num? id;
   @override
   final String? name;
   @override
@@ -239,13 +239,13 @@ class _$_City extends _City {
   @override
   final String? country;
   @override
-  final double? population;
+  final num? population;
   @override
-  final double? timezone;
+  final num? timezone;
   @override
-  final double? sunrise;
+  final num? sunrise;
   @override
-  final double? sunset;
+  final num? sunset;
 
   @override
   String toString() {
@@ -298,18 +298,18 @@ class _$_City extends _City {
 
 abstract class _City extends City {
   const factory _City(
-      {double? id,
+      {num? id,
       String? name,
       Coord? coord,
       String? country,
-      double? population,
-      double? timezone,
-      double? sunrise,
-      double? sunset}) = _$_City;
+      num? population,
+      num? timezone,
+      num? sunrise,
+      num? sunset}) = _$_City;
   const _City._() : super._();
 
   @override
-  double? get id => throw _privateConstructorUsedError;
+  num? get id => throw _privateConstructorUsedError;
   @override
   String? get name => throw _privateConstructorUsedError;
   @override
@@ -317,13 +317,13 @@ abstract class _City extends City {
   @override
   String? get country => throw _privateConstructorUsedError;
   @override
-  double? get population => throw _privateConstructorUsedError;
+  num? get population => throw _privateConstructorUsedError;
   @override
-  double? get timezone => throw _privateConstructorUsedError;
+  num? get timezone => throw _privateConstructorUsedError;
   @override
-  double? get sunrise => throw _privateConstructorUsedError;
+  num? get sunrise => throw _privateConstructorUsedError;
   @override
-  double? get sunset => throw _privateConstructorUsedError;
+  num? get sunset => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$CityCopyWith<_City> get copyWith => throw _privateConstructorUsedError;

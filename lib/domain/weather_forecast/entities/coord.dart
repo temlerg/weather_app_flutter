@@ -5,16 +5,16 @@ part 'coord.freezed.dart';
 @freezed
 class Coord with _$Coord {
   const factory Coord({
-     double? lon,
-     double? lat,
+     num? lon,
+     num? lat,
   }) = _Coord;
 
   const Coord._();
 
 
   factory Coord.fromJson(Map<String, dynamic> json) {
-    final double lon = json["lon"] as double;
-    final double lat = json["lat"] as double;
+    final num lon = json["lon"];
+    final num lat = json["lat"];
 
     return Coord(lon: lon, lat: lat);
   }

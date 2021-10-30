@@ -34,16 +34,17 @@ class FiveDayScreenBloc extends Bloc<FiveDayScreenEvent, FiveDayScreenState> {
               final description = item.weatherList![0].description;
 
               String? icon;
-              if (main == "Clear") icon = 'icons/clear_sky.svg';
-              if (main == "Snow") icon = 'icons/snow.svg';
-              if (main == "Rain") icon = 'icons/rain.svg';
-              if (main == "Thunderstorm") icon = 'icons/thunderstorm.svg';
-              if (description == "few clouds") icon = 'icons/few_clouds.svg';
+              if (main == "Clear") icon = "assets/icons/clear_sky.svg";
+              if (main == "Snow") icon = "assets/icons/snow.svg";
+              if (main == "Rain") icon = "assets/icons/rain.svg";
+              if (main == "Thunderstorm") icon = "assets/icons/thunderstorm.svg";
+              if (description == "few clouds")
+                icon = "assets/icons/few_clouds.svg";
               if (description == "scattered clouds")
-                icon = 'icons/scattered_clouds.svg';
+                icon = "assets/icons/scattered_clouds.svg";
               if (description == "broken clouds" ||
                   description == "overcast clouds")
-                icon = 'icons/broken_clouds.svg';
+                icon = "assets/icons/broken_clouds.svg";
 
               list.add(FiveDayWeather(
                 temp: temp,
@@ -62,46 +63,7 @@ class FiveDayScreenBloc extends Bloc<FiveDayScreenEvent, FiveDayScreenState> {
           },
         );
       },
-      refresh: (e) async* {
-        final weather = await getIt<IWeatherForecastRepository>()
-            .loadWeatherForecast(e.update);
-        yield* weather.fold(
-          (l) async* {},
-          (r) async* {
-            final List<FiveDayWeather> list = [];
-            for (final item in r.list!) {
-              final temp = item.mainData!.temp;
-              final dt = item.dt;
-              final main = item.weatherList![0].main;
-              final description = item.weatherList![0].description;
-
-              String? icon;
-              if (main == "Clear") icon = 'icons/clear_sky.svg';
-              if (main == "Snow") icon = 'icons/snow.svg';
-              if (main == "Rain") icon = 'icons/rain.svg';
-              if (main == "Thunderstorm") icon = 'icons/thunderstorm.svg';
-              if (description == "few clouds") icon = 'icons/few_clouds.svg';
-              if (description == "scattered clouds")
-                icon = 'icons/scattered_clouds.svg';
-              if (description == "broken clouds" ||
-                  description == "overcast clouds")
-                icon = 'icons/broken_clouds.svg';
-
-              list.add(FiveDayWeather(
-                temp: temp,
-                dt: dt,
-                main: main,
-                description: description,
-                icon: icon,
-              ));
-
-            }
-            yield state.copyWith(
-              list: list,
-            );
-          },
-        );
-      },
+      refresh: (e) async* {},
       upDateDeg: (e) async* {
         yield state.copyWith(
           deg: e.deg,
