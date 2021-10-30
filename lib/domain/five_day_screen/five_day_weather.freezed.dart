@@ -16,11 +16,18 @@ final _privateConstructorUsedError = UnsupportedError(
 class _$FiveDayWeatherTearOff {
   const _$FiveDayWeatherTearOff();
 
-  _FiveDayWeather call({double? temp, String? main, String? dt}) {
+  _FiveDayWeather call(
+      {double? temp,
+      String? description,
+      String? main,
+      String? dt,
+      String? icon}) {
     return _FiveDayWeather(
       temp: temp,
+      description: description,
       main: main,
       dt: dt,
+      icon: icon,
     );
   }
 }
@@ -31,8 +38,10 @@ const $FiveDayWeather = _$FiveDayWeatherTearOff();
 /// @nodoc
 mixin _$FiveDayWeather {
   double? get temp => throw _privateConstructorUsedError;
+  String? get description => throw _privateConstructorUsedError;
   String? get main => throw _privateConstructorUsedError;
   String? get dt => throw _privateConstructorUsedError;
+  String? get icon => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $FiveDayWeatherCopyWith<FiveDayWeather> get copyWith =>
@@ -44,7 +53,12 @@ abstract class $FiveDayWeatherCopyWith<$Res> {
   factory $FiveDayWeatherCopyWith(
           FiveDayWeather value, $Res Function(FiveDayWeather) then) =
       _$FiveDayWeatherCopyWithImpl<$Res>;
-  $Res call({double? temp, String? main, String? dt});
+  $Res call(
+      {double? temp,
+      String? description,
+      String? main,
+      String? dt,
+      String? icon});
 }
 
 /// @nodoc
@@ -59,14 +73,20 @@ class _$FiveDayWeatherCopyWithImpl<$Res>
   @override
   $Res call({
     Object? temp = freezed,
+    Object? description = freezed,
     Object? main = freezed,
     Object? dt = freezed,
+    Object? icon = freezed,
   }) {
     return _then(_value.copyWith(
       temp: temp == freezed
           ? _value.temp
           : temp // ignore: cast_nullable_to_non_nullable
               as double?,
+      description: description == freezed
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String?,
       main: main == freezed
           ? _value.main
           : main // ignore: cast_nullable_to_non_nullable
@@ -74,6 +94,10 @@ class _$FiveDayWeatherCopyWithImpl<$Res>
       dt: dt == freezed
           ? _value.dt
           : dt // ignore: cast_nullable_to_non_nullable
+              as String?,
+      icon: icon == freezed
+          ? _value.icon
+          : icon // ignore: cast_nullable_to_non_nullable
               as String?,
     ));
   }
@@ -86,7 +110,12 @@ abstract class _$FiveDayWeatherCopyWith<$Res>
           _FiveDayWeather value, $Res Function(_FiveDayWeather) then) =
       __$FiveDayWeatherCopyWithImpl<$Res>;
   @override
-  $Res call({double? temp, String? main, String? dt});
+  $Res call(
+      {double? temp,
+      String? description,
+      String? main,
+      String? dt,
+      String? icon});
 }
 
 /// @nodoc
@@ -103,14 +132,20 @@ class __$FiveDayWeatherCopyWithImpl<$Res>
   @override
   $Res call({
     Object? temp = freezed,
+    Object? description = freezed,
     Object? main = freezed,
     Object? dt = freezed,
+    Object? icon = freezed,
   }) {
     return _then(_FiveDayWeather(
       temp: temp == freezed
           ? _value.temp
           : temp // ignore: cast_nullable_to_non_nullable
               as double?,
+      description: description == freezed
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String?,
       main: main == freezed
           ? _value.main
           : main // ignore: cast_nullable_to_non_nullable
@@ -119,6 +154,10 @@ class __$FiveDayWeatherCopyWithImpl<$Res>
           ? _value.dt
           : dt // ignore: cast_nullable_to_non_nullable
               as String?,
+      icon: icon == freezed
+          ? _value.icon
+          : icon // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -126,18 +165,24 @@ class __$FiveDayWeatherCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_FiveDayWeather extends _FiveDayWeather {
-  const _$_FiveDayWeather({this.temp, this.main, this.dt}) : super._();
+  const _$_FiveDayWeather(
+      {this.temp, this.description, this.main, this.dt, this.icon})
+      : super._();
 
   @override
   final double? temp;
   @override
+  final String? description;
+  @override
   final String? main;
   @override
   final String? dt;
+  @override
+  final String? icon;
 
   @override
   String toString() {
-    return 'FiveDayWeather(temp: $temp, main: $main, dt: $dt)';
+    return 'FiveDayWeather(temp: $temp, description: $description, main: $main, dt: $dt, icon: $icon)';
   }
 
   @override
@@ -146,18 +191,25 @@ class _$_FiveDayWeather extends _FiveDayWeather {
         (other is _FiveDayWeather &&
             (identical(other.temp, temp) ||
                 const DeepCollectionEquality().equals(other.temp, temp)) &&
+            (identical(other.description, description) ||
+                const DeepCollectionEquality()
+                    .equals(other.description, description)) &&
             (identical(other.main, main) ||
                 const DeepCollectionEquality().equals(other.main, main)) &&
             (identical(other.dt, dt) ||
-                const DeepCollectionEquality().equals(other.dt, dt)));
+                const DeepCollectionEquality().equals(other.dt, dt)) &&
+            (identical(other.icon, icon) ||
+                const DeepCollectionEquality().equals(other.icon, icon)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(temp) ^
+      const DeepCollectionEquality().hash(description) ^
       const DeepCollectionEquality().hash(main) ^
-      const DeepCollectionEquality().hash(dt);
+      const DeepCollectionEquality().hash(dt) ^
+      const DeepCollectionEquality().hash(icon);
 
   @JsonKey(ignore: true)
   @override
@@ -166,16 +218,24 @@ class _$_FiveDayWeather extends _FiveDayWeather {
 }
 
 abstract class _FiveDayWeather extends FiveDayWeather {
-  const factory _FiveDayWeather({double? temp, String? main, String? dt}) =
-      _$_FiveDayWeather;
+  const factory _FiveDayWeather(
+      {double? temp,
+      String? description,
+      String? main,
+      String? dt,
+      String? icon}) = _$_FiveDayWeather;
   const _FiveDayWeather._() : super._();
 
   @override
   double? get temp => throw _privateConstructorUsedError;
   @override
+  String? get description => throw _privateConstructorUsedError;
+  @override
   String? get main => throw _privateConstructorUsedError;
   @override
   String? get dt => throw _privateConstructorUsedError;
+  @override
+  String? get icon => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$FiveDayWeatherCopyWith<_FiveDayWeather> get copyWith =>

@@ -426,7 +426,8 @@ class _$OneDayScreenStateTearOff {
       String? main,
       String? description,
       double? windSpeed,
-      String? deg}) {
+      String? deg,
+      String? icon}) {
     return _OneDayScreenState(
       cod: cod,
       city: city,
@@ -440,6 +441,7 @@ class _$OneDayScreenStateTearOff {
       description: description,
       windSpeed: windSpeed,
       deg: deg,
+      icon: icon,
     );
   }
 }
@@ -461,6 +463,7 @@ mixin _$OneDayScreenState {
   String? get description => throw _privateConstructorUsedError;
   double? get windSpeed => throw _privateConstructorUsedError;
   String? get deg => throw _privateConstructorUsedError;
+  String? get icon => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $OneDayScreenStateCopyWith<OneDayScreenState> get copyWith =>
@@ -484,7 +487,8 @@ abstract class $OneDayScreenStateCopyWith<$Res> {
       String? main,
       String? description,
       double? windSpeed,
-      String? deg});
+      String? deg,
+      String? icon});
 }
 
 /// @nodoc
@@ -510,6 +514,7 @@ class _$OneDayScreenStateCopyWithImpl<$Res>
     Object? description = freezed,
     Object? windSpeed = freezed,
     Object? deg = freezed,
+    Object? icon = freezed,
   }) {
     return _then(_value.copyWith(
       cod: cod == freezed
@@ -560,6 +565,10 @@ class _$OneDayScreenStateCopyWithImpl<$Res>
           ? _value.deg
           : deg // ignore: cast_nullable_to_non_nullable
               as String?,
+      icon: icon == freezed
+          ? _value.icon
+          : icon // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -583,7 +592,8 @@ abstract class _$OneDayScreenStateCopyWith<$Res>
       String? main,
       String? description,
       double? windSpeed,
-      String? deg});
+      String? deg,
+      String? icon});
 }
 
 /// @nodoc
@@ -611,6 +621,7 @@ class __$OneDayScreenStateCopyWithImpl<$Res>
     Object? description = freezed,
     Object? windSpeed = freezed,
     Object? deg = freezed,
+    Object? icon = freezed,
   }) {
     return _then(_OneDayScreenState(
       cod: cod == freezed
@@ -661,6 +672,10 @@ class __$OneDayScreenStateCopyWithImpl<$Res>
           ? _value.deg
           : deg // ignore: cast_nullable_to_non_nullable
               as String?,
+      icon: icon == freezed
+          ? _value.icon
+          : icon // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -680,7 +695,8 @@ class _$_OneDayScreenState extends _OneDayScreenState {
       this.main,
       this.description,
       this.windSpeed,
-      this.deg})
+      this.deg,
+      this.icon})
       : super._();
 
   @override
@@ -707,10 +723,12 @@ class _$_OneDayScreenState extends _OneDayScreenState {
   final double? windSpeed;
   @override
   final String? deg;
+  @override
+  final String? icon;
 
   @override
   String toString() {
-    return 'OneDayScreenState(cod: $cod, city: $city, seaLevel: $seaLevel, feelsLike: $feelsLike, tempMin: $tempMin, tempMax: $tempMax, temp: $temp, humidity: $humidity, main: $main, description: $description, windSpeed: $windSpeed, deg: $deg)';
+    return 'OneDayScreenState(cod: $cod, city: $city, seaLevel: $seaLevel, feelsLike: $feelsLike, tempMin: $tempMin, tempMax: $tempMax, temp: $temp, humidity: $humidity, main: $main, description: $description, windSpeed: $windSpeed, deg: $deg, icon: $icon)';
   }
 
   @override
@@ -747,7 +765,9 @@ class _$_OneDayScreenState extends _OneDayScreenState {
                 const DeepCollectionEquality()
                     .equals(other.windSpeed, windSpeed)) &&
             (identical(other.deg, deg) ||
-                const DeepCollectionEquality().equals(other.deg, deg)));
+                const DeepCollectionEquality().equals(other.deg, deg)) &&
+            (identical(other.icon, icon) ||
+                const DeepCollectionEquality().equals(other.icon, icon)));
   }
 
   @override
@@ -764,7 +784,8 @@ class _$_OneDayScreenState extends _OneDayScreenState {
       const DeepCollectionEquality().hash(main) ^
       const DeepCollectionEquality().hash(description) ^
       const DeepCollectionEquality().hash(windSpeed) ^
-      const DeepCollectionEquality().hash(deg);
+      const DeepCollectionEquality().hash(deg) ^
+      const DeepCollectionEquality().hash(icon);
 
   @JsonKey(ignore: true)
   @override
@@ -785,7 +806,8 @@ abstract class _OneDayScreenState extends OneDayScreenState {
       String? main,
       String? description,
       double? windSpeed,
-      String? deg}) = _$_OneDayScreenState;
+      String? deg,
+      String? icon}) = _$_OneDayScreenState;
   const _OneDayScreenState._() : super._();
 
   @override
@@ -812,6 +834,8 @@ abstract class _OneDayScreenState extends OneDayScreenState {
   double? get windSpeed => throw _privateConstructorUsedError;
   @override
   String? get deg => throw _privateConstructorUsedError;
+  @override
+  String? get icon => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$OneDayScreenStateCopyWith<_OneDayScreenState> get copyWith =>

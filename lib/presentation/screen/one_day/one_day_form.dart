@@ -29,9 +29,11 @@ class OneDayForm extends StatelessWidget {
     final tempMax = state.tempMax;
     final speed = state.windSpeed;
     final humidity = state.humidity;
+    final icon = state.icon;
 
     items.add(MainDataWeather(
         degree: degree!,
+        icon: icon!,
         feelsLike: feelsLike!,
         temp: temp!,
         weather: weather!,

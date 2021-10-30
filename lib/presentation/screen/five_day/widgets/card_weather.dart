@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:weather_app/domain/five_day_screen/five_day_weather.dart';
 import 'package:weather_app/presentation/mixin/MixinColor.dart';
 import 'package:weather_app/presentation/mixin/MixinText.dart';
@@ -40,9 +41,15 @@ class CardWeatherState extends State<CardWeather> with MixinText, MixinColor {
                         "${widget.fiveDayWeather.temp?.round()} °${widget.deg}",
                         style: heading3(mainColorInt()),
                       ),
-                      subtitle: Text(widget.fiveDayWeather.main!,
+                      subtitle: Text(widget.fiveDayWeather.description!,
                           style: heading4(0xFFBE86BF)),
                     ),
+                  ),
+                  Padding(padding: const EdgeInsets.all(16)),
+                  SvgPicture.asset(
+                    widget.fiveDayWeather.icon!,
+                    width: 200.w,
+                    height: 200.h,
                   ),
                 ],
               )),

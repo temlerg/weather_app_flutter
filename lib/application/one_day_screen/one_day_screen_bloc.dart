@@ -12,7 +12,7 @@ part 'one_day_screen_bloc.freezed.dart';
 
 class OneDayScreenBloc extends Bloc<OneDayScreenEvent, OneDayScreenState> {
   OneDayScreenBloc({required String city})
-      : super(OneDayScreenState.initial(city: city));
+      : super(OneDayScreenState.initial(city: city), );
 
   @override
   Stream<OneDayScreenState> mapEventToState(OneDayScreenEvent event) async* {

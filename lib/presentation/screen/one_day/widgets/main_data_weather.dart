@@ -1,7 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:weather_app/presentation/mixin/MixinColor.dart';
 import 'package:weather_app/presentation/mixin/MixinText.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class MainDataWeather extends StatefulWidget {
   final double feelsLike;
@@ -9,6 +11,7 @@ class MainDataWeather extends StatefulWidget {
   final String weather;
   final String weatherDescription;
   final String degree;
+  final String icon;
 
   const MainDataWeather({
     required this.degree,
@@ -16,6 +19,7 @@ class MainDataWeather extends StatefulWidget {
     required this.temp,
     required this.weather,
     required this.weatherDescription,
+    required this.icon
   });
 
   @override
@@ -29,12 +33,26 @@ class MainDataWeatherState extends State<MainDataWeather>
     return Column(
       children: [
         Padding(padding: const EdgeInsets.all(16)),
-        ListTile(
-          title: Text(widget.weather, style: heading1(mainColorInt())),
-          subtitle: Text(
-            widget.weatherDescription,
-            style: heading2(0xFF9e3fa0),
-          ),
+        Row(
+          children: [
+            Flexible(
+              child: ListTile(
+                title: Text(widget.weather, style: heading1(mainColorInt())),
+                subtitle: Text(
+                  widget.weatherDescription,
+                  style: heading2(0xFF9e3fa0),
+                ),
+              ),
+              flex: 1,
+            ),
+            // Padding(padding: EdgeInsets.only(left: 32.w)),
+            Flexible(
+              child: SvgPicture.asset(
+                widget.icon,
+              ),
+              flex: 1,
+            )
+          ],
         ),
         Padding(padding: const EdgeInsets.all(16.0)),
         ListTile(
