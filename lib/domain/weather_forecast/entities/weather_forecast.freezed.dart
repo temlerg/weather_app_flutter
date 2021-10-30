@@ -17,7 +17,11 @@ class _$WeatherForecastTearOff {
   const _$WeatherForecastTearOff();
 
   _WeatherForecast call(
-      {String? cod, double? message, int? cnt, Forecasts? list, City? city}) {
+      {String? cod,
+      double? message,
+      int? cnt,
+      List<Forecasts>? list,
+      City? city}) {
     return _WeatherForecast(
       cod: cod,
       message: message,
@@ -36,7 +40,7 @@ mixin _$WeatherForecast {
   String? get cod => throw _privateConstructorUsedError;
   double? get message => throw _privateConstructorUsedError;
   int? get cnt => throw _privateConstructorUsedError;
-  Forecasts? get list => throw _privateConstructorUsedError;
+  List<Forecasts>? get list => throw _privateConstructorUsedError;
   City? get city => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -50,9 +54,12 @@ abstract class $WeatherForecastCopyWith<$Res> {
           WeatherForecast value, $Res Function(WeatherForecast) then) =
       _$WeatherForecastCopyWithImpl<$Res>;
   $Res call(
-      {String? cod, double? message, int? cnt, Forecasts? list, City? city});
+      {String? cod,
+      double? message,
+      int? cnt,
+      List<Forecasts>? list,
+      City? city});
 
-  $ForecastsCopyWith<$Res>? get list;
   $CityCopyWith<$Res>? get city;
 }
 
@@ -89,23 +96,12 @@ class _$WeatherForecastCopyWithImpl<$Res>
       list: list == freezed
           ? _value.list
           : list // ignore: cast_nullable_to_non_nullable
-              as Forecasts?,
+              as List<Forecasts>?,
       city: city == freezed
           ? _value.city
           : city // ignore: cast_nullable_to_non_nullable
               as City?,
     ));
-  }
-
-  @override
-  $ForecastsCopyWith<$Res>? get list {
-    if (_value.list == null) {
-      return null;
-    }
-
-    return $ForecastsCopyWith<$Res>(_value.list!, (value) {
-      return _then(_value.copyWith(list: value));
-    });
   }
 
   @override
@@ -128,10 +124,12 @@ abstract class _$WeatherForecastCopyWith<$Res>
       __$WeatherForecastCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String? cod, double? message, int? cnt, Forecasts? list, City? city});
+      {String? cod,
+      double? message,
+      int? cnt,
+      List<Forecasts>? list,
+      City? city});
 
-  @override
-  $ForecastsCopyWith<$Res>? get list;
   @override
   $CityCopyWith<$Res>? get city;
 }
@@ -171,7 +169,7 @@ class __$WeatherForecastCopyWithImpl<$Res>
       list: list == freezed
           ? _value.list
           : list // ignore: cast_nullable_to_non_nullable
-              as Forecasts?,
+              as List<Forecasts>?,
       city: city == freezed
           ? _value.city
           : city // ignore: cast_nullable_to_non_nullable
@@ -194,7 +192,7 @@ class _$_WeatherForecast extends _WeatherForecast {
   @override
   final int? cnt;
   @override
-  final Forecasts? list;
+  final List<Forecasts>? list;
   @override
   final City? city;
 
@@ -240,7 +238,7 @@ abstract class _WeatherForecast extends WeatherForecast {
       {String? cod,
       double? message,
       int? cnt,
-      Forecasts? list,
+      List<Forecasts>? list,
       City? city}) = _$_WeatherForecast;
   const _WeatherForecast._() : super._();
 
@@ -251,7 +249,7 @@ abstract class _WeatherForecast extends WeatherForecast {
   @override
   int? get cnt => throw _privateConstructorUsedError;
   @override
-  Forecasts? get list => throw _privateConstructorUsedError;
+  List<Forecasts>? get list => throw _privateConstructorUsedError;
   @override
   City? get city => throw _privateConstructorUsedError;
   @override

@@ -94,8 +94,8 @@ class __$WindCopyWithImpl<$Res> extends _$WindCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_Wind implements _Wind {
-  const _$_Wind({this.speed});
+class _$_Wind extends _Wind {
+  const _$_Wind({this.speed}) : super._();
 
   @override
   final double? speed;
@@ -123,8 +123,9 @@ class _$_Wind implements _Wind {
       __$WindCopyWithImpl<_Wind>(this, _$identity);
 }
 
-abstract class _Wind implements Wind {
+abstract class _Wind extends Wind {
   const factory _Wind({double? speed}) = _$_Wind;
+  const _Wind._() : super._();
 
   @override
   double? get speed => throw _privateConstructorUsedError;

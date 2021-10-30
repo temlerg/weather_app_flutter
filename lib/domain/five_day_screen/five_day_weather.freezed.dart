@@ -20,7 +20,7 @@ class _$FiveDayWeatherTearOff {
       {double? temp,
       String? description,
       String? main,
-      String? dt,
+      DateTime? dt,
       String? icon}) {
     return _FiveDayWeather(
       temp: temp,
@@ -40,7 +40,7 @@ mixin _$FiveDayWeather {
   double? get temp => throw _privateConstructorUsedError;
   String? get description => throw _privateConstructorUsedError;
   String? get main => throw _privateConstructorUsedError;
-  String? get dt => throw _privateConstructorUsedError;
+  DateTime? get dt => throw _privateConstructorUsedError;
   String? get icon => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -57,7 +57,7 @@ abstract class $FiveDayWeatherCopyWith<$Res> {
       {double? temp,
       String? description,
       String? main,
-      String? dt,
+      DateTime? dt,
       String? icon});
 }
 
@@ -94,7 +94,7 @@ class _$FiveDayWeatherCopyWithImpl<$Res>
       dt: dt == freezed
           ? _value.dt
           : dt // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as DateTime?,
       icon: icon == freezed
           ? _value.icon
           : icon // ignore: cast_nullable_to_non_nullable
@@ -114,7 +114,7 @@ abstract class _$FiveDayWeatherCopyWith<$Res>
       {double? temp,
       String? description,
       String? main,
-      String? dt,
+      DateTime? dt,
       String? icon});
 }
 
@@ -153,7 +153,7 @@ class __$FiveDayWeatherCopyWithImpl<$Res>
       dt: dt == freezed
           ? _value.dt
           : dt // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as DateTime?,
       icon: icon == freezed
           ? _value.icon
           : icon // ignore: cast_nullable_to_non_nullable
@@ -176,7 +176,7 @@ class _$_FiveDayWeather extends _FiveDayWeather {
   @override
   final String? main;
   @override
-  final String? dt;
+  final DateTime? dt;
   @override
   final String? icon;
 
@@ -222,7 +222,7 @@ abstract class _FiveDayWeather extends FiveDayWeather {
       {double? temp,
       String? description,
       String? main,
-      String? dt,
+      DateTime? dt,
       String? icon}) = _$_FiveDayWeather;
   const _FiveDayWeather._() : super._();
 
@@ -233,7 +233,7 @@ abstract class _FiveDayWeather extends FiveDayWeather {
   @override
   String? get main => throw _privateConstructorUsedError;
   @override
-  String? get dt => throw _privateConstructorUsedError;
+  DateTime? get dt => throw _privateConstructorUsedError;
   @override
   String? get icon => throw _privateConstructorUsedError;
   @override

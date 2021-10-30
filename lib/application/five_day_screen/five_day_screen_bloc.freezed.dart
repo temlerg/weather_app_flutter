@@ -16,13 +16,21 @@ final _privateConstructorUsedError = UnsupportedError(
 class _$FiveDayScreenEventTearOff {
   const _$FiveDayScreenEventTearOff();
 
-  _Init init() {
-    return const _Init();
+  _Init init(String city) {
+    return _Init(
+      city,
+    );
   }
 
   _Refresh refresh(String update) {
     return _Refresh(
       update,
+    );
+  }
+
+  _UpDateDeg upDateDeg(String deg) {
+    return _UpDateDeg(
+      deg,
     );
   }
 }
@@ -34,14 +42,16 @@ const $FiveDayScreenEvent = _$FiveDayScreenEventTearOff();
 mixin _$FiveDayScreenEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() init,
+    required TResult Function(String city) init,
     required TResult Function(String update) refresh,
+    required TResult Function(String deg) upDateDeg,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? init,
+    TResult Function(String city)? init,
     TResult Function(String update)? refresh,
+    TResult Function(String deg)? upDateDeg,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -49,12 +59,14 @@ mixin _$FiveDayScreenEvent {
   TResult map<TResult extends Object?>({
     required TResult Function(_Init value) init,
     required TResult Function(_Refresh value) refresh,
+    required TResult Function(_UpDateDeg value) upDateDeg,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Init value)? init,
     TResult Function(_Refresh value)? refresh,
+    TResult Function(_UpDateDeg value)? upDateDeg,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -81,6 +93,7 @@ class _$FiveDayScreenEventCopyWithImpl<$Res>
 abstract class _$InitCopyWith<$Res> {
   factory _$InitCopyWith(_Init value, $Res Function(_Init) then) =
       __$InitCopyWithImpl<$Res>;
+  $Res call({String city});
 }
 
 /// @nodoc
@@ -91,44 +104,70 @@ class __$InitCopyWithImpl<$Res> extends _$FiveDayScreenEventCopyWithImpl<$Res>
 
   @override
   _Init get _value => super._value as _Init;
+
+  @override
+  $Res call({
+    Object? city = freezed,
+  }) {
+    return _then(_Init(
+      city == freezed
+          ? _value.city
+          : city // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
 }
 
 /// @nodoc
 
 class _$_Init implements _Init {
-  const _$_Init();
+  const _$_Init(this.city);
+
+  @override
+  final String city;
 
   @override
   String toString() {
-    return 'FiveDayScreenEvent.init()';
+    return 'FiveDayScreenEvent.init(city: $city)';
   }
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is _Init);
+    return identical(this, other) ||
+        (other is _Init &&
+            (identical(other.city, city) ||
+                const DeepCollectionEquality().equals(other.city, city)));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(city);
+
+  @JsonKey(ignore: true)
+  @override
+  _$InitCopyWith<_Init> get copyWith =>
+      __$InitCopyWithImpl<_Init>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() init,
+    required TResult Function(String city) init,
     required TResult Function(String update) refresh,
+    required TResult Function(String deg) upDateDeg,
   }) {
-    return init();
+    return init(city);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? init,
+    TResult Function(String city)? init,
     TResult Function(String update)? refresh,
+    TResult Function(String deg)? upDateDeg,
     required TResult orElse(),
   }) {
     if (init != null) {
-      return init();
+      return init(city);
     }
     return orElse();
   }
@@ -138,6 +177,7 @@ class _$_Init implements _Init {
   TResult map<TResult extends Object?>({
     required TResult Function(_Init value) init,
     required TResult Function(_Refresh value) refresh,
+    required TResult Function(_UpDateDeg value) upDateDeg,
   }) {
     return init(this);
   }
@@ -147,6 +187,7 @@ class _$_Init implements _Init {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Init value)? init,
     TResult Function(_Refresh value)? refresh,
+    TResult Function(_UpDateDeg value)? upDateDeg,
     required TResult orElse(),
   }) {
     if (init != null) {
@@ -157,7 +198,11 @@ class _$_Init implements _Init {
 }
 
 abstract class _Init implements FiveDayScreenEvent {
-  const factory _Init() = _$_Init;
+  const factory _Init(String city) = _$_Init;
+
+  String get city => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  _$InitCopyWith<_Init> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -223,8 +268,9 @@ class _$_Refresh implements _Refresh {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() init,
+    required TResult Function(String city) init,
     required TResult Function(String update) refresh,
+    required TResult Function(String deg) upDateDeg,
   }) {
     return refresh(update);
   }
@@ -232,8 +278,9 @@ class _$_Refresh implements _Refresh {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? init,
+    TResult Function(String city)? init,
     TResult Function(String update)? refresh,
+    TResult Function(String deg)? upDateDeg,
     required TResult orElse(),
   }) {
     if (refresh != null) {
@@ -247,6 +294,7 @@ class _$_Refresh implements _Refresh {
   TResult map<TResult extends Object?>({
     required TResult Function(_Init value) init,
     required TResult Function(_Refresh value) refresh,
+    required TResult Function(_UpDateDeg value) upDateDeg,
   }) {
     return refresh(this);
   }
@@ -256,6 +304,7 @@ class _$_Refresh implements _Refresh {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Init value)? init,
     TResult Function(_Refresh value)? refresh,
+    TResult Function(_UpDateDeg value)? upDateDeg,
     required TResult orElse(),
   }) {
     if (refresh != null) {
@@ -271,6 +320,125 @@ abstract class _Refresh implements FiveDayScreenEvent {
   String get update => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   _$RefreshCopyWith<_Refresh> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$UpDateDegCopyWith<$Res> {
+  factory _$UpDateDegCopyWith(
+          _UpDateDeg value, $Res Function(_UpDateDeg) then) =
+      __$UpDateDegCopyWithImpl<$Res>;
+  $Res call({String deg});
+}
+
+/// @nodoc
+class __$UpDateDegCopyWithImpl<$Res>
+    extends _$FiveDayScreenEventCopyWithImpl<$Res>
+    implements _$UpDateDegCopyWith<$Res> {
+  __$UpDateDegCopyWithImpl(_UpDateDeg _value, $Res Function(_UpDateDeg) _then)
+      : super(_value, (v) => _then(v as _UpDateDeg));
+
+  @override
+  _UpDateDeg get _value => super._value as _UpDateDeg;
+
+  @override
+  $Res call({
+    Object? deg = freezed,
+  }) {
+    return _then(_UpDateDeg(
+      deg == freezed
+          ? _value.deg
+          : deg // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$_UpDateDeg implements _UpDateDeg {
+  const _$_UpDateDeg(this.deg);
+
+  @override
+  final String deg;
+
+  @override
+  String toString() {
+    return 'FiveDayScreenEvent.upDateDeg(deg: $deg)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _UpDateDeg &&
+            (identical(other.deg, deg) ||
+                const DeepCollectionEquality().equals(other.deg, deg)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(deg);
+
+  @JsonKey(ignore: true)
+  @override
+  _$UpDateDegCopyWith<_UpDateDeg> get copyWith =>
+      __$UpDateDegCopyWithImpl<_UpDateDeg>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String city) init,
+    required TResult Function(String update) refresh,
+    required TResult Function(String deg) upDateDeg,
+  }) {
+    return upDateDeg(deg);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String city)? init,
+    TResult Function(String update)? refresh,
+    TResult Function(String deg)? upDateDeg,
+    required TResult orElse(),
+  }) {
+    if (upDateDeg != null) {
+      return upDateDeg(deg);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Init value) init,
+    required TResult Function(_Refresh value) refresh,
+    required TResult Function(_UpDateDeg value) upDateDeg,
+  }) {
+    return upDateDeg(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Init value)? init,
+    TResult Function(_Refresh value)? refresh,
+    TResult Function(_UpDateDeg value)? upDateDeg,
+    required TResult orElse(),
+  }) {
+    if (upDateDeg != null) {
+      return upDateDeg(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _UpDateDeg implements FiveDayScreenEvent {
+  const factory _UpDateDeg(String deg) = _$_UpDateDeg;
+
+  String get deg => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  _$UpDateDegCopyWith<_UpDateDeg> get copyWith =>
       throw _privateConstructorUsedError;
 }
 

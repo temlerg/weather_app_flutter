@@ -23,7 +23,7 @@ class _SearchScreenFormWidget extends State<SearchScreenForm>
 
   @override
   Widget build(BuildContext context) {
-    String city = "";
+    String? city;
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
@@ -110,15 +110,25 @@ class _SearchScreenFormWidget extends State<SearchScreenForm>
                       style: textMediumBold(whiteColorInt()),
                     ),
                     onPressed: () {
-                      context.read<SearchScreenBloc>().add(
-                          SearchScreenEvent.search(
-                              context.read<SearchScreenBloc>().state.city!));
-                      print(city);
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
+                      if (city != null) {
+                        context
+                            .read<SearchScreenBloc>()
+                            .add(SearchScreenEvent.search(city!));
+                        if (context.read<SearchScreenBloc>().state.isRight) {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
                               builder: (context) =>
-                                  WeatherForecastScreen(city: city)));
+                                  WeatherForecastScreen(city: city!),
+                            ),
+                          );
+                        } else {
+                          _cityNotFound(context);
+                        }
+                      } else {
+                        print(city);
+                        _cityIsNull(context);
+                      }
                     },
                   ),
                 ),
@@ -126,6 +136,36 @@ class _SearchScreenFormWidget extends State<SearchScreenForm>
             ),
           ],
         ),
+      ),
+    );
+  }
+
+  Future _cityNotFound(final BuildContext context) async {
+    await showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: Text("City not found, please enter correct city"),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.of(context).pop(false),
+            child: Text("Come back"),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Future _cityIsNull(final BuildContext context) async {
+    await showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: Text("Enter city, the field must not be empty"),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.of(context).pop(false),
+            child: Text("Come back"),
+          ),
+        ],
       ),
     );
   }

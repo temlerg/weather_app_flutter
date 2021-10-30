@@ -20,9 +20,9 @@ class OneDayScreenState with _$OneDayScreenState {
 
   const OneDayScreenState._();
 
-  factory OneDayScreenState.initial({required String city}) {
+  factory OneDayScreenState.initial() {
     return OneDayScreenState(
-        city: city,
+        city: null,
         cod: "",
         seaLevel: 0,
         feelsLike: 0,

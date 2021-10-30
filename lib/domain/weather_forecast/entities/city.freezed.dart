@@ -218,7 +218,7 @@ class __$CityCopyWithImpl<$Res> extends _$CityCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_City implements _City {
+class _$_City extends _City {
   const _$_City(
       {this.id,
       this.name,
@@ -227,7 +227,8 @@ class _$_City implements _City {
       this.population,
       this.timezone,
       this.sunrise,
-      this.sunset});
+      this.sunset})
+      : super._();
 
   @override
   final double? id;
@@ -295,7 +296,7 @@ class _$_City implements _City {
       __$CityCopyWithImpl<_City>(this, _$identity);
 }
 
-abstract class _City implements City {
+abstract class _City extends City {
   const factory _City(
       {double? id,
       String? name,
@@ -305,6 +306,7 @@ abstract class _City implements City {
       double? timezone,
       double? sunrise,
       double? sunset}) = _$_City;
+  const _City._() : super._();
 
   @override
   double? get id => throw _privateConstructorUsedError;

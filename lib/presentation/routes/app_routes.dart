@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:weather_app/presentation/screen/search_screen/search_screen.dart';
 import 'package:weather_app/presentation/screen/settings/settings_screen.dart';
-import 'package:weather_app/presentation/screen/weather_forecast.dart';
 
 class AppRouter {
   Route onGenerateRoute(RouteSettings settings) {

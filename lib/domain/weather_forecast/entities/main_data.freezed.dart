@@ -17,14 +17,14 @@ class _$MainDataTearOff {
   const _$MainDataTearOff();
 
   _MainData call(
-      {int? seeLevel,
+      {int? seaLevel,
       double? feelLike,
       double? tempMin,
       double? tempMax,
       double? temp,
       int? humidity}) {
     return _MainData(
-      seeLevel: seeLevel,
+      seaLevel: seaLevel,
       feelLike: feelLike,
       tempMin: tempMin,
       tempMax: tempMax,
@@ -39,7 +39,7 @@ const $MainData = _$MainDataTearOff();
 
 /// @nodoc
 mixin _$MainData {
-  int? get seeLevel => throw _privateConstructorUsedError;
+  int? get seaLevel => throw _privateConstructorUsedError;
   double? get feelLike => throw _privateConstructorUsedError;
   double? get tempMin => throw _privateConstructorUsedError;
   double? get tempMax => throw _privateConstructorUsedError;
@@ -56,7 +56,7 @@ abstract class $MainDataCopyWith<$Res> {
   factory $MainDataCopyWith(MainData value, $Res Function(MainData) then) =
       _$MainDataCopyWithImpl<$Res>;
   $Res call(
-      {int? seeLevel,
+      {int? seaLevel,
       double? feelLike,
       double? tempMin,
       double? tempMax,
@@ -74,7 +74,7 @@ class _$MainDataCopyWithImpl<$Res> implements $MainDataCopyWith<$Res> {
 
   @override
   $Res call({
-    Object? seeLevel = freezed,
+    Object? seaLevel = freezed,
     Object? feelLike = freezed,
     Object? tempMin = freezed,
     Object? tempMax = freezed,
@@ -82,9 +82,9 @@ class _$MainDataCopyWithImpl<$Res> implements $MainDataCopyWith<$Res> {
     Object? humidity = freezed,
   }) {
     return _then(_value.copyWith(
-      seeLevel: seeLevel == freezed
-          ? _value.seeLevel
-          : seeLevel // ignore: cast_nullable_to_non_nullable
+      seaLevel: seaLevel == freezed
+          ? _value.seaLevel
+          : seaLevel // ignore: cast_nullable_to_non_nullable
               as int?,
       feelLike: feelLike == freezed
           ? _value.feelLike
@@ -116,7 +116,7 @@ abstract class _$MainDataCopyWith<$Res> implements $MainDataCopyWith<$Res> {
       __$MainDataCopyWithImpl<$Res>;
   @override
   $Res call(
-      {int? seeLevel,
+      {int? seaLevel,
       double? feelLike,
       double? tempMin,
       double? tempMax,
@@ -135,7 +135,7 @@ class __$MainDataCopyWithImpl<$Res> extends _$MainDataCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? seeLevel = freezed,
+    Object? seaLevel = freezed,
     Object? feelLike = freezed,
     Object? tempMin = freezed,
     Object? tempMax = freezed,
@@ -143,9 +143,9 @@ class __$MainDataCopyWithImpl<$Res> extends _$MainDataCopyWithImpl<$Res>
     Object? humidity = freezed,
   }) {
     return _then(_MainData(
-      seeLevel: seeLevel == freezed
-          ? _value.seeLevel
-          : seeLevel // ignore: cast_nullable_to_non_nullable
+      seaLevel: seaLevel == freezed
+          ? _value.seaLevel
+          : seaLevel // ignore: cast_nullable_to_non_nullable
               as int?,
       feelLike: feelLike == freezed
           ? _value.feelLike
@@ -173,17 +173,18 @@ class __$MainDataCopyWithImpl<$Res> extends _$MainDataCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_MainData implements _MainData {
+class _$_MainData extends _MainData {
   const _$_MainData(
-      {this.seeLevel,
+      {this.seaLevel,
       this.feelLike,
       this.tempMin,
       this.tempMax,
       this.temp,
-      this.humidity});
+      this.humidity})
+      : super._();
 
   @override
-  final int? seeLevel;
+  final int? seaLevel;
   @override
   final double? feelLike;
   @override
@@ -197,16 +198,16 @@ class _$_MainData implements _MainData {
 
   @override
   String toString() {
-    return 'MainData(seeLevel: $seeLevel, feelLike: $feelLike, tempMin: $tempMin, tempMax: $tempMax, temp: $temp, humidity: $humidity)';
+    return 'MainData(seaLevel: $seaLevel, feelLike: $feelLike, tempMin: $tempMin, tempMax: $tempMax, temp: $temp, humidity: $humidity)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _MainData &&
-            (identical(other.seeLevel, seeLevel) ||
+            (identical(other.seaLevel, seaLevel) ||
                 const DeepCollectionEquality()
-                    .equals(other.seeLevel, seeLevel)) &&
+                    .equals(other.seaLevel, seaLevel)) &&
             (identical(other.feelLike, feelLike) ||
                 const DeepCollectionEquality()
                     .equals(other.feelLike, feelLike)) &&
@@ -226,7 +227,7 @@ class _$_MainData implements _MainData {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(seeLevel) ^
+      const DeepCollectionEquality().hash(seaLevel) ^
       const DeepCollectionEquality().hash(feelLike) ^
       const DeepCollectionEquality().hash(tempMin) ^
       const DeepCollectionEquality().hash(tempMax) ^
@@ -239,17 +240,18 @@ class _$_MainData implements _MainData {
       __$MainDataCopyWithImpl<_MainData>(this, _$identity);
 }
 
-abstract class _MainData implements MainData {
+abstract class _MainData extends MainData {
   const factory _MainData(
-      {int? seeLevel,
+      {int? seaLevel,
       double? feelLike,
       double? tempMin,
       double? tempMax,
       double? temp,
       int? humidity}) = _$_MainData;
+  const _MainData._() : super._();
 
   @override
-  int? get seeLevel => throw _privateConstructorUsedError;
+  int? get seaLevel => throw _privateConstructorUsedError;
   @override
   double? get feelLike => throw _privateConstructorUsedError;
   @override

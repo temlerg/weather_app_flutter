@@ -8,13 +8,13 @@ class FiveDayWeather with _$FiveDayWeather {
     double? temp,
     String? description,
     String? main,
-    String? dt,
+    DateTime? dt,
     String? icon,
   }) = _FiveDayWeather;
 
   const FiveDayWeather._();
 
-  factory FiveDayWeather.setIcon(String main, String description) {
+  String setIcon(String main, String description) {
     String icon = '';
     if (main == "Clear") icon = 'icons/clear_sky.svg';
     if (main == "Snow") icon = 'icons/snow.svg';
@@ -25,6 +25,6 @@ class FiveDayWeather with _$FiveDayWeather {
     if (description == "broken clouds" || description == "overcast clouds")
       icon = 'icons/broken_clouds.svg';
 
-    return FiveDayWeather(icon: icon);
+    return icon;
   }
 }

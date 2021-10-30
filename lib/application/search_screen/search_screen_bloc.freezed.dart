@@ -16,10 +16,6 @@ final _privateConstructorUsedError = UnsupportedError(
 class _$SearchScreenEventTearOff {
   const _$SearchScreenEventTearOff();
 
-  _Init init() {
-    return const _Init();
-  }
-
   _UpDateCity upDateCity(String update) {
     return _UpDateCity(
       update,
@@ -40,14 +36,12 @@ const $SearchScreenEvent = _$SearchScreenEventTearOff();
 mixin _$SearchScreenEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() init,
     required TResult Function(String update) upDateCity,
     required TResult Function(String city) search,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? init,
     TResult Function(String update)? upDateCity,
     TResult Function(String city)? search,
     required TResult orElse(),
@@ -55,14 +49,12 @@ mixin _$SearchScreenEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Init value) init,
     required TResult Function(_UpDateCity value) upDateCity,
     required TResult Function(_Search value) search,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Init value)? init,
     TResult Function(_UpDateCity value)? upDateCity,
     TResult Function(_Search value)? search,
     required TResult orElse(),
@@ -85,93 +77,6 @@ class _$SearchScreenEventCopyWithImpl<$Res>
   final SearchScreenEvent _value;
   // ignore: unused_field
   final $Res Function(SearchScreenEvent) _then;
-}
-
-/// @nodoc
-abstract class _$InitCopyWith<$Res> {
-  factory _$InitCopyWith(_Init value, $Res Function(_Init) then) =
-      __$InitCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$InitCopyWithImpl<$Res> extends _$SearchScreenEventCopyWithImpl<$Res>
-    implements _$InitCopyWith<$Res> {
-  __$InitCopyWithImpl(_Init _value, $Res Function(_Init) _then)
-      : super(_value, (v) => _then(v as _Init));
-
-  @override
-  _Init get _value => super._value as _Init;
-}
-
-/// @nodoc
-
-class _$_Init implements _Init {
-  const _$_Init();
-
-  @override
-  String toString() {
-    return 'SearchScreenEvent.init()';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is _Init);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() init,
-    required TResult Function(String update) upDateCity,
-    required TResult Function(String city) search,
-  }) {
-    return init();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? init,
-    TResult Function(String update)? upDateCity,
-    TResult Function(String city)? search,
-    required TResult orElse(),
-  }) {
-    if (init != null) {
-      return init();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Init value) init,
-    required TResult Function(_UpDateCity value) upDateCity,
-    required TResult Function(_Search value) search,
-  }) {
-    return init(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Init value)? init,
-    TResult Function(_UpDateCity value)? upDateCity,
-    TResult Function(_Search value)? search,
-    required TResult orElse(),
-  }) {
-    if (init != null) {
-      return init(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _Init implements SearchScreenEvent {
-  const factory _Init() = _$_Init;
 }
 
 /// @nodoc
@@ -239,7 +144,6 @@ class _$_UpDateCity implements _UpDateCity {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() init,
     required TResult Function(String update) upDateCity,
     required TResult Function(String city) search,
   }) {
@@ -249,7 +153,6 @@ class _$_UpDateCity implements _UpDateCity {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? init,
     TResult Function(String update)? upDateCity,
     TResult Function(String city)? search,
     required TResult orElse(),
@@ -263,7 +166,6 @@ class _$_UpDateCity implements _UpDateCity {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Init value) init,
     required TResult Function(_UpDateCity value) upDateCity,
     required TResult Function(_Search value) search,
   }) {
@@ -273,7 +175,6 @@ class _$_UpDateCity implements _UpDateCity {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Init value)? init,
     TResult Function(_UpDateCity value)? upDateCity,
     TResult Function(_Search value)? search,
     required TResult orElse(),
@@ -356,7 +257,6 @@ class _$_Search implements _Search {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() init,
     required TResult Function(String update) upDateCity,
     required TResult Function(String city) search,
   }) {
@@ -366,7 +266,6 @@ class _$_Search implements _Search {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? init,
     TResult Function(String update)? upDateCity,
     TResult Function(String city)? search,
     required TResult orElse(),
@@ -380,7 +279,6 @@ class _$_Search implements _Search {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Init value) init,
     required TResult Function(_UpDateCity value) upDateCity,
     required TResult Function(_Search value) search,
   }) {
@@ -390,7 +288,6 @@ class _$_Search implements _Search {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Init value)? init,
     TResult Function(_UpDateCity value)? upDateCity,
     TResult Function(_Search value)? search,
     required TResult orElse(),
@@ -414,9 +311,10 @@ abstract class _Search implements SearchScreenEvent {
 class _$SearchScreenStateTearOff {
   const _$SearchScreenStateTearOff();
 
-  _SearchScreenState call({String? city}) {
+  _SearchScreenState call({String? city, required bool isRight}) {
     return _SearchScreenState(
       city: city,
+      isRight: isRight,
     );
   }
 }
@@ -427,6 +325,7 @@ const $SearchScreenState = _$SearchScreenStateTearOff();
 /// @nodoc
 mixin _$SearchScreenState {
   String? get city => throw _privateConstructorUsedError;
+  bool get isRight => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $SearchScreenStateCopyWith<SearchScreenState> get copyWith =>
@@ -438,7 +337,7 @@ abstract class $SearchScreenStateCopyWith<$Res> {
   factory $SearchScreenStateCopyWith(
           SearchScreenState value, $Res Function(SearchScreenState) then) =
       _$SearchScreenStateCopyWithImpl<$Res>;
-  $Res call({String? city});
+  $Res call({String? city, bool isRight});
 }
 
 /// @nodoc
@@ -453,12 +352,17 @@ class _$SearchScreenStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object? city = freezed,
+    Object? isRight = freezed,
   }) {
     return _then(_value.copyWith(
       city: city == freezed
           ? _value.city
           : city // ignore: cast_nullable_to_non_nullable
               as String?,
+      isRight: isRight == freezed
+          ? _value.isRight
+          : isRight // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -470,7 +374,7 @@ abstract class _$SearchScreenStateCopyWith<$Res>
           _SearchScreenState value, $Res Function(_SearchScreenState) then) =
       __$SearchScreenStateCopyWithImpl<$Res>;
   @override
-  $Res call({String? city});
+  $Res call({String? city, bool isRight});
 }
 
 /// @nodoc
@@ -487,12 +391,17 @@ class __$SearchScreenStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object? city = freezed,
+    Object? isRight = freezed,
   }) {
     return _then(_SearchScreenState(
       city: city == freezed
           ? _value.city
           : city // ignore: cast_nullable_to_non_nullable
               as String?,
+      isRight: isRight == freezed
+          ? _value.isRight
+          : isRight // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -500,14 +409,16 @@ class __$SearchScreenStateCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_SearchScreenState extends _SearchScreenState {
-  const _$_SearchScreenState({this.city}) : super._();
+  const _$_SearchScreenState({this.city, required this.isRight}) : super._();
 
   @override
   final String? city;
+  @override
+  final bool isRight;
 
   @override
   String toString() {
-    return 'SearchScreenState(city: $city)';
+    return 'SearchScreenState(city: $city, isRight: $isRight)';
   }
 
   @override
@@ -515,12 +426,16 @@ class _$_SearchScreenState extends _SearchScreenState {
     return identical(this, other) ||
         (other is _SearchScreenState &&
             (identical(other.city, city) ||
-                const DeepCollectionEquality().equals(other.city, city)));
+                const DeepCollectionEquality().equals(other.city, city)) &&
+            (identical(other.isRight, isRight) ||
+                const DeepCollectionEquality().equals(other.isRight, isRight)));
   }
 
   @override
   int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(city);
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(city) ^
+      const DeepCollectionEquality().hash(isRight);
 
   @JsonKey(ignore: true)
   @override
@@ -529,11 +444,14 @@ class _$_SearchScreenState extends _SearchScreenState {
 }
 
 abstract class _SearchScreenState extends SearchScreenState {
-  const factory _SearchScreenState({String? city}) = _$_SearchScreenState;
+  const factory _SearchScreenState({String? city, required bool isRight}) =
+      _$_SearchScreenState;
   const _SearchScreenState._() : super._();
 
   @override
   String? get city => throw _privateConstructorUsedError;
+  @override
+  bool get isRight => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$SearchScreenStateCopyWith<_SearchScreenState> get copyWith =>

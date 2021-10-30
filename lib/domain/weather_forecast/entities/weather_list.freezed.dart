@@ -111,8 +111,8 @@ class __$WeatherListCopyWithImpl<$Res> extends _$WeatherListCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_WeatherList implements _WeatherList {
-  const _$_WeatherList({this.main, this.description});
+class _$_WeatherList extends _WeatherList {
+  const _$_WeatherList({this.main, this.description}) : super._();
 
   @override
   final String? main;
@@ -147,9 +147,10 @@ class _$_WeatherList implements _WeatherList {
       __$WeatherListCopyWithImpl<_WeatherList>(this, _$identity);
 }
 
-abstract class _WeatherList implements WeatherList {
+abstract class _WeatherList extends WeatherList {
   const factory _WeatherList({String? main, String? description}) =
       _$_WeatherList;
+  const _WeatherList._() : super._();
 
   @override
   String? get main => throw _privateConstructorUsedError;

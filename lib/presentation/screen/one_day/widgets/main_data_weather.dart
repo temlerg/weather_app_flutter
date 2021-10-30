@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:weather_app/presentation/mixin/MixinColor.dart';
 import 'package:weather_app/presentation/mixin/MixinText.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class MainDataWeather extends StatefulWidget {
   final double feelsLike;

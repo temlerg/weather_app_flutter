@@ -16,8 +16,10 @@ final _privateConstructorUsedError = UnsupportedError(
 class _$OneDayScreenEventTearOff {
   const _$OneDayScreenEventTearOff();
 
-  _Init init() {
-    return const _Init();
+  _Init init(String city) {
+    return _Init(
+      city,
+    );
   }
 
   _Refresh refresh(String update) {
@@ -40,14 +42,14 @@ const $OneDayScreenEvent = _$OneDayScreenEventTearOff();
 mixin _$OneDayScreenEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() init,
+    required TResult Function(String city) init,
     required TResult Function(String update) refresh,
     required TResult Function(String deg) upDateDeg,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? init,
+    TResult Function(String city)? init,
     TResult Function(String update)? refresh,
     TResult Function(String deg)? upDateDeg,
     required TResult orElse(),
@@ -91,6 +93,7 @@ class _$OneDayScreenEventCopyWithImpl<$Res>
 abstract class _$InitCopyWith<$Res> {
   factory _$InitCopyWith(_Init value, $Res Function(_Init) then) =
       __$InitCopyWithImpl<$Res>;
+  $Res call({String city});
 }
 
 /// @nodoc
@@ -101,46 +104,70 @@ class __$InitCopyWithImpl<$Res> extends _$OneDayScreenEventCopyWithImpl<$Res>
 
   @override
   _Init get _value => super._value as _Init;
+
+  @override
+  $Res call({
+    Object? city = freezed,
+  }) {
+    return _then(_Init(
+      city == freezed
+          ? _value.city
+          : city // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
 }
 
 /// @nodoc
 
 class _$_Init implements _Init {
-  const _$_Init();
+  const _$_Init(this.city);
+
+  @override
+  final String city;
 
   @override
   String toString() {
-    return 'OneDayScreenEvent.init()';
+    return 'OneDayScreenEvent.init(city: $city)';
   }
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is _Init);
+    return identical(this, other) ||
+        (other is _Init &&
+            (identical(other.city, city) ||
+                const DeepCollectionEquality().equals(other.city, city)));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(city);
+
+  @JsonKey(ignore: true)
+  @override
+  _$InitCopyWith<_Init> get copyWith =>
+      __$InitCopyWithImpl<_Init>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() init,
+    required TResult Function(String city) init,
     required TResult Function(String update) refresh,
     required TResult Function(String deg) upDateDeg,
   }) {
-    return init();
+    return init(city);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? init,
+    TResult Function(String city)? init,
     TResult Function(String update)? refresh,
     TResult Function(String deg)? upDateDeg,
     required TResult orElse(),
   }) {
     if (init != null) {
-      return init();
+      return init(city);
     }
     return orElse();
   }
@@ -171,7 +198,11 @@ class _$_Init implements _Init {
 }
 
 abstract class _Init implements OneDayScreenEvent {
-  const factory _Init() = _$_Init;
+  const factory _Init(String city) = _$_Init;
+
+  String get city => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  _$InitCopyWith<_Init> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -236,7 +267,7 @@ class _$_Refresh implements _Refresh {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() init,
+    required TResult Function(String city) init,
     required TResult Function(String update) refresh,
     required TResult Function(String deg) upDateDeg,
   }) {
@@ -246,7 +277,7 @@ class _$_Refresh implements _Refresh {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? init,
+    TResult Function(String city)? init,
     TResult Function(String update)? refresh,
     TResult Function(String deg)? upDateDeg,
     required TResult orElse(),
@@ -355,7 +386,7 @@ class _$_UpDateDeg implements _UpDateDeg {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() init,
+    required TResult Function(String city) init,
     required TResult Function(String update) refresh,
     required TResult Function(String deg) upDateDeg,
   }) {
@@ -365,7 +396,7 @@ class _$_UpDateDeg implements _UpDateDeg {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? init,
+    TResult Function(String city)? init,
     TResult Function(String update)? refresh,
     TResult Function(String deg)? upDateDeg,
     required TResult orElse(),

@@ -9,29 +9,25 @@ class FiveDayScreenState with _$FiveDayScreenState {
 
   const FiveDayScreenState._();
 
-  factory FiveDayScreenState.initial({required String city}) {
+  factory FiveDayScreenState.initial() {
     return FiveDayScreenState(
       list: [
         FiveDayWeather(
-            dt: "0",
             description: "Clear sky",
             main: "Clear",
             temp: 0,
             icon: 'icons/clear_sky.svg'),
         FiveDayWeather(
-            dt: "0",
             description: "Clear sky",
             main: "Clear",
             temp: 0,
             icon: 'icons/clear_sky.svg'),
         FiveDayWeather(
-            dt: "0",
             description: "Clear sky",
             main: "Clear",
             temp: 0,
             icon: 'icons/clear_sky.svg'),
         FiveDayWeather(
-            dt: "0",
             description: "Clear sky",
             main: "Clear",
             temp: 0,

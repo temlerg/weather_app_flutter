@@ -17,7 +17,10 @@ class _$ForecastsTearOff {
   const _$ForecastsTearOff();
 
   _Forecasts call(
-      {int? dt, Wind? wind, MainData? mainData, WeatherList? weatherList}) {
+      {DateTime? dt,
+      Wind? wind,
+      MainData? mainData,
+      List<WeatherList>? weatherList}) {
     return _Forecasts(
       dt: dt,
       wind: wind,
@@ -32,10 +35,10 @@ const $Forecasts = _$ForecastsTearOff();
 
 /// @nodoc
 mixin _$Forecasts {
-  int? get dt => throw _privateConstructorUsedError;
+  DateTime? get dt => throw _privateConstructorUsedError;
   Wind? get wind => throw _privateConstructorUsedError;
   MainData? get mainData => throw _privateConstructorUsedError;
-  WeatherList? get weatherList => throw _privateConstructorUsedError;
+  List<WeatherList>? get weatherList => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $ForecastsCopyWith<Forecasts> get copyWith =>
@@ -47,11 +50,13 @@ abstract class $ForecastsCopyWith<$Res> {
   factory $ForecastsCopyWith(Forecasts value, $Res Function(Forecasts) then) =
       _$ForecastsCopyWithImpl<$Res>;
   $Res call(
-      {int? dt, Wind? wind, MainData? mainData, WeatherList? weatherList});
+      {DateTime? dt,
+      Wind? wind,
+      MainData? mainData,
+      List<WeatherList>? weatherList});
 
   $WindCopyWith<$Res>? get wind;
   $MainDataCopyWith<$Res>? get mainData;
-  $WeatherListCopyWith<$Res>? get weatherList;
 }
 
 /// @nodoc
@@ -73,7 +78,7 @@ class _$ForecastsCopyWithImpl<$Res> implements $ForecastsCopyWith<$Res> {
       dt: dt == freezed
           ? _value.dt
           : dt // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as DateTime?,
       wind: wind == freezed
           ? _value.wind
           : wind // ignore: cast_nullable_to_non_nullable
@@ -85,7 +90,7 @@ class _$ForecastsCopyWithImpl<$Res> implements $ForecastsCopyWith<$Res> {
       weatherList: weatherList == freezed
           ? _value.weatherList
           : weatherList // ignore: cast_nullable_to_non_nullable
-              as WeatherList?,
+              as List<WeatherList>?,
     ));
   }
 
@@ -110,17 +115,6 @@ class _$ForecastsCopyWithImpl<$Res> implements $ForecastsCopyWith<$Res> {
       return _then(_value.copyWith(mainData: value));
     });
   }
-
-  @override
-  $WeatherListCopyWith<$Res>? get weatherList {
-    if (_value.weatherList == null) {
-      return null;
-    }
-
-    return $WeatherListCopyWith<$Res>(_value.weatherList!, (value) {
-      return _then(_value.copyWith(weatherList: value));
-    });
-  }
 }
 
 /// @nodoc
@@ -130,14 +124,15 @@ abstract class _$ForecastsCopyWith<$Res> implements $ForecastsCopyWith<$Res> {
       __$ForecastsCopyWithImpl<$Res>;
   @override
   $Res call(
-      {int? dt, Wind? wind, MainData? mainData, WeatherList? weatherList});
+      {DateTime? dt,
+      Wind? wind,
+      MainData? mainData,
+      List<WeatherList>? weatherList});
 
   @override
   $WindCopyWith<$Res>? get wind;
   @override
   $MainDataCopyWith<$Res>? get mainData;
-  @override
-  $WeatherListCopyWith<$Res>? get weatherList;
 }
 
 /// @nodoc
@@ -160,7 +155,7 @@ class __$ForecastsCopyWithImpl<$Res> extends _$ForecastsCopyWithImpl<$Res>
       dt: dt == freezed
           ? _value.dt
           : dt // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as DateTime?,
       wind: wind == freezed
           ? _value.wind
           : wind // ignore: cast_nullable_to_non_nullable
@@ -172,24 +167,25 @@ class __$ForecastsCopyWithImpl<$Res> extends _$ForecastsCopyWithImpl<$Res>
       weatherList: weatherList == freezed
           ? _value.weatherList
           : weatherList // ignore: cast_nullable_to_non_nullable
-              as WeatherList?,
+              as List<WeatherList>?,
     ));
   }
 }
 
 /// @nodoc
 
-class _$_Forecasts implements _Forecasts {
-  const _$_Forecasts({this.dt, this.wind, this.mainData, this.weatherList});
+class _$_Forecasts extends _Forecasts {
+  const _$_Forecasts({this.dt, this.wind, this.mainData, this.weatherList})
+      : super._();
 
   @override
-  final int? dt;
+  final DateTime? dt;
   @override
   final Wind? wind;
   @override
   final MainData? mainData;
   @override
-  final WeatherList? weatherList;
+  final List<WeatherList>? weatherList;
 
   @override
   String toString() {
@@ -226,21 +222,22 @@ class _$_Forecasts implements _Forecasts {
       __$ForecastsCopyWithImpl<_Forecasts>(this, _$identity);
 }
 
-abstract class _Forecasts implements Forecasts {
+abstract class _Forecasts extends Forecasts {
   const factory _Forecasts(
-      {int? dt,
+      {DateTime? dt,
       Wind? wind,
       MainData? mainData,
-      WeatherList? weatherList}) = _$_Forecasts;
+      List<WeatherList>? weatherList}) = _$_Forecasts;
+  const _Forecasts._() : super._();
 
   @override
-  int? get dt => throw _privateConstructorUsedError;
+  DateTime? get dt => throw _privateConstructorUsedError;
   @override
   Wind? get wind => throw _privateConstructorUsedError;
   @override
   MainData? get mainData => throw _privateConstructorUsedError;
   @override
-  WeatherList? get weatherList => throw _privateConstructorUsedError;
+  List<WeatherList>? get weatherList => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$ForecastsCopyWith<_Forecasts> get copyWith =>

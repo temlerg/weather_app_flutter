@@ -106,8 +106,8 @@ class __$CoordCopyWithImpl<$Res> extends _$CoordCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_Coord implements _Coord {
-  const _$_Coord({this.lon, this.lat});
+class _$_Coord extends _Coord {
+  const _$_Coord({this.lon, this.lat}) : super._();
 
   @override
   final double? lon;
@@ -141,8 +141,9 @@ class _$_Coord implements _Coord {
       __$CoordCopyWithImpl<_Coord>(this, _$identity);
 }
 
-abstract class _Coord implements Coord {
+abstract class _Coord extends Coord {
   const factory _Coord({double? lon, double? lat}) = _$_Coord;
+  const _Coord._() : super._();
 
   @override
   double? get lon => throw _privateConstructorUsedError;
