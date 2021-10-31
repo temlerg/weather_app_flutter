@@ -4,7 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:weather_app/presentation/mixin/MixinColor.dart';
 import 'package:weather_app/presentation/mixin/MixinText.dart';
 import 'package:weather_app/application/search_screen/search_screen_bloc.dart';
-import 'package:weather_app/presentation/screen/weather_forecast.dart';
+import 'package:weather_app/presentation/screen/weather_forecast/weather_forecast.dart';
 
 class SearchScreenForm extends StatefulWidget {
   @override
@@ -108,7 +108,7 @@ class _SearchScreenFormWidget extends State<SearchScreenForm>
                             context,
                             MaterialPageRoute(
                               builder: (context) =>
-                                  WeatherForecastScreen(city: city!),
+                                  WeatherForecast(city: city!),
                             ),
                           );
                       } else {

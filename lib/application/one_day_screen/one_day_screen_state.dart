@@ -23,17 +23,6 @@ class OneDayScreenState with _$OneDayScreenState {
 
   factory OneDayScreenState.initial() {
     return OneDayScreenState(
-      city: null,
-      cod: "",
-      seaLevel: 0,
-      feelsLike: 0,
-      temp: 0,
-      tempMax: 0,
-      tempMin: 0,
-      humidity: 0,
-      windSpeed: 0,
-      main: "Rain",
-      description: "light rain",
       deg: "C",
       // icon: "icons/rain.svg",
       isRight: false,
