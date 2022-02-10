@@ -47,6 +47,16 @@ class AppColors {
 
   static const Color appAccent = Color(_mainColor);
 
+  static const gradientButton = LinearGradient(
+    begin: Alignment.topCenter,
+    end: Alignment.bottomCenter,
+    stops: [0.0, 1.0],
+    colors: [
+      Color(0xFF861089),
+      Color(0xFF5d0b5f),
+    ],
+  );
+
   //static const Color cardBack = Color(0xFFFAFAFA);
   // static const Color lightGrey = Color(0xFFE7E8EA);
 }

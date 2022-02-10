@@ -24,6 +24,7 @@ class OneDayScreenBloc extends Bloc<OneDayScreenEvent, OneDayScreenState> {
           (l) async* {
             yield state.copyWith(
               isRight: false,
+              isLoading: false,
             );
           },
           (r) async* {
@@ -54,6 +55,7 @@ class OneDayScreenBloc extends Bloc<OneDayScreenEvent, OneDayScreenState> {
                 description: r.list![0].weatherList![0].description,
                 windSpeed: r.list![0].wind!.speed,
                 icon: icon,
+                isLoading: false,
                 isRight: true);
           },
         );
@@ -91,6 +93,7 @@ class OneDayScreenBloc extends Bloc<OneDayScreenEvent, OneDayScreenState> {
                 description: r.list![0].weatherList![0].description,
                 windSpeed: r.list![0].wind!.speed,
                 icon: icon,
+                isLoading: false,
                 isRight: true);
           },
         );

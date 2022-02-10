@@ -17,6 +17,7 @@ class OneDayScreenState with _$OneDayScreenState {
     String? deg,
     String? icon,
     required bool isRight,
+    required bool isLoading
   }) = _OneDayScreenState;
 
   const OneDayScreenState._();
@@ -25,7 +26,8 @@ class OneDayScreenState with _$OneDayScreenState {
     return OneDayScreenState(
       deg: "C",
       // icon: "icons/rain.svg",
-      isRight: false,
+      isLoading: true,
+      isRight: true,
     );
   }
 }

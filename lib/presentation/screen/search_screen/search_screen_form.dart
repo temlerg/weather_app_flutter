@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:weather_app/presentation/mixin/MixinColor.dart';
 import 'package:weather_app/presentation/mixin/MixinText.dart';
 import 'package:weather_app/application/search_screen/search_screen_bloc.dart';
+import 'package:weather_app/presentation/routes/router.dart';
 import 'package:weather_app/presentation/screen/weather_forecast/weather_forecast.dart';
 
 class SearchScreenForm extends StatefulWidget {
@@ -14,12 +15,6 @@ class SearchScreenForm extends StatefulWidget {
 class _SearchScreenFormWidget extends State<SearchScreenForm>
     with MixinColor, MixinText {
   final _textController = TextEditingController();
-
-  @override
-  void dispose() {
-    _textController.dispose();
-    super.dispose();
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -92,25 +87,26 @@ class _SearchScreenFormWidget extends State<SearchScreenForm>
                 child: Container(
                   height: 40.h,
                   width: 120.w,
-                  child: TextButton(
-                    style: TextButton.styleFrom(
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(12)),
-                      backgroundColor: mainColor(),
+                  child: InkWell(
+                    child: Container(
+                      decoration: BoxDecoration(
+                          borderRadius:
+                              const BorderRadius.all(Radius.circular(20)),
+                          gradient: AppColors.gradientButton),
+                      child: Align(
+                        alignment: Alignment.center,
+                        child: Text(
+                          "Search",
+                          style: textMedium(whiteColorInt()),
+                        ),
+                      ),
                     ),
-                    child: Text(
-                      "Search",
-                      style: textMedium(whiteColorInt()),
-                    ),
-                    onPressed: () {
+                    onTap: () {
                       if (city != null) {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) =>
-                                  WeatherForecast(city: city!),
-                            ),
-                          );
+                        context.rootRouter.pushAndPopUntil(
+                          WeatherForecastScreenRoute(city: city!),
+                          predicate: (route) => false,
+                        );
                       } else {
                         print(city);
                         _cityIsNull(context);

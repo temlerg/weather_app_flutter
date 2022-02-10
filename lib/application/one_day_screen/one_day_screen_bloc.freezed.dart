@@ -459,7 +459,8 @@ class _$OneDayScreenStateTearOff {
       num? windSpeed,
       String? deg,
       String? icon,
-      required bool isRight}) {
+      required bool isRight,
+      required bool isLoading}) {
     return _OneDayScreenState(
       cod: cod,
       city: city,
@@ -475,6 +476,7 @@ class _$OneDayScreenStateTearOff {
       deg: deg,
       icon: icon,
       isRight: isRight,
+      isLoading: isLoading,
     );
   }
 }
@@ -498,6 +500,7 @@ mixin _$OneDayScreenState {
   String? get deg => throw _privateConstructorUsedError;
   String? get icon => throw _privateConstructorUsedError;
   bool get isRight => throw _privateConstructorUsedError;
+  bool get isLoading => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $OneDayScreenStateCopyWith<OneDayScreenState> get copyWith =>
@@ -523,7 +526,8 @@ abstract class $OneDayScreenStateCopyWith<$Res> {
       num? windSpeed,
       String? deg,
       String? icon,
-      bool isRight});
+      bool isRight,
+      bool isLoading});
 }
 
 /// @nodoc
@@ -551,6 +555,7 @@ class _$OneDayScreenStateCopyWithImpl<$Res>
     Object? deg = freezed,
     Object? icon = freezed,
     Object? isRight = freezed,
+    Object? isLoading = freezed,
   }) {
     return _then(_value.copyWith(
       cod: cod == freezed
@@ -609,6 +614,10 @@ class _$OneDayScreenStateCopyWithImpl<$Res>
           ? _value.isRight
           : isRight // ignore: cast_nullable_to_non_nullable
               as bool,
+      isLoading: isLoading == freezed
+          ? _value.isLoading
+          : isLoading // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -634,7 +643,8 @@ abstract class _$OneDayScreenStateCopyWith<$Res>
       num? windSpeed,
       String? deg,
       String? icon,
-      bool isRight});
+      bool isRight,
+      bool isLoading});
 }
 
 /// @nodoc
@@ -664,6 +674,7 @@ class __$OneDayScreenStateCopyWithImpl<$Res>
     Object? deg = freezed,
     Object? icon = freezed,
     Object? isRight = freezed,
+    Object? isLoading = freezed,
   }) {
     return _then(_OneDayScreenState(
       cod: cod == freezed
@@ -722,6 +733,10 @@ class __$OneDayScreenStateCopyWithImpl<$Res>
           ? _value.isRight
           : isRight // ignore: cast_nullable_to_non_nullable
               as bool,
+      isLoading: isLoading == freezed
+          ? _value.isLoading
+          : isLoading // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -743,7 +758,8 @@ class _$_OneDayScreenState extends _OneDayScreenState {
       this.windSpeed,
       this.deg,
       this.icon,
-      required this.isRight})
+      required this.isRight,
+      required this.isLoading})
       : super._();
 
   @override
@@ -774,10 +790,12 @@ class _$_OneDayScreenState extends _OneDayScreenState {
   final String? icon;
   @override
   final bool isRight;
+  @override
+  final bool isLoading;
 
   @override
   String toString() {
-    return 'OneDayScreenState(cod: $cod, city: $city, seaLevel: $seaLevel, feelsLike: $feelsLike, tempMin: $tempMin, tempMax: $tempMax, temp: $temp, humidity: $humidity, main: $main, description: $description, windSpeed: $windSpeed, deg: $deg, icon: $icon, isRight: $isRight)';
+    return 'OneDayScreenState(cod: $cod, city: $city, seaLevel: $seaLevel, feelsLike: $feelsLike, tempMin: $tempMin, tempMax: $tempMax, temp: $temp, humidity: $humidity, main: $main, description: $description, windSpeed: $windSpeed, deg: $deg, icon: $icon, isRight: $isRight, isLoading: $isLoading)';
   }
 
   @override
@@ -818,7 +836,11 @@ class _$_OneDayScreenState extends _OneDayScreenState {
             (identical(other.icon, icon) ||
                 const DeepCollectionEquality().equals(other.icon, icon)) &&
             (identical(other.isRight, isRight) ||
-                const DeepCollectionEquality().equals(other.isRight, isRight)));
+                const DeepCollectionEquality()
+                    .equals(other.isRight, isRight)) &&
+            (identical(other.isLoading, isLoading) ||
+                const DeepCollectionEquality()
+                    .equals(other.isLoading, isLoading)));
   }
 
   @override
@@ -837,7 +859,8 @@ class _$_OneDayScreenState extends _OneDayScreenState {
       const DeepCollectionEquality().hash(windSpeed) ^
       const DeepCollectionEquality().hash(deg) ^
       const DeepCollectionEquality().hash(icon) ^
-      const DeepCollectionEquality().hash(isRight);
+      const DeepCollectionEquality().hash(isRight) ^
+      const DeepCollectionEquality().hash(isLoading);
 
   @JsonKey(ignore: true)
   @override
@@ -860,7 +883,8 @@ abstract class _OneDayScreenState extends OneDayScreenState {
       num? windSpeed,
       String? deg,
       String? icon,
-      required bool isRight}) = _$_OneDayScreenState;
+      required bool isRight,
+      required bool isLoading}) = _$_OneDayScreenState;
   const _OneDayScreenState._() : super._();
 
   @override
@@ -891,6 +915,8 @@ abstract class _OneDayScreenState extends OneDayScreenState {
   String? get icon => throw _privateConstructorUsedError;
   @override
   bool get isRight => throw _privateConstructorUsedError;
+  @override
+  bool get isLoading => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$OneDayScreenStateCopyWith<_OneDayScreenState> get copyWith =>
